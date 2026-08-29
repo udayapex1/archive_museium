@@ -1,4 +1,5 @@
-import { Html, useLoader } from '@react-three/drei';
+import { Html } from '@react-three/drei';
+import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 import { Exhibit } from '@/lib/types';
 
