@@ -1,0 +1,1 @@
+import { Exhibit, Era } from './types'; export function filterExhibits(items:Exhibit[], opts:{query?:string;era?:Era|'all';only3D?:boolean}){const q=(opts.query||'').toLowerCase().trim(); return items.filter(e=>(!q||`${e.title} ${e.shortDescription} ${e.description}`.toLowerCase().includes(q))&&(!opts.era||opts.era==='all'||e.gallery===opts.era)&&(!opts.only3D||e.has3D))}

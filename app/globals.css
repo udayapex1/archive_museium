@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=National+Park:wght@200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --paper: #f7f1e8;
+    --ink: #2f211b
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'National Park', Arial, sans-serif
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Geom', Georgia, serif
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.grain {
+    background-image: radial-gradient(rgba(47, 33, 27, .07) .7px, transparent .7px);
+    background-size: 6px 6px
+}
+
+.display {
+    letter-spacing: -.045em
+}
+
+.eyebrow {
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 700;
+    color: #8b5e48
+}
+
+.focus-ring:focus-visible {
+    outline: 3px solid #d47b37;
+    outline-offset: 3px
+}
+
+#galleries>a {
+    min-height: 205px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    box-shadow: 0 16px 35px rgba(58, 35, 24, .12)
+}
+
+#galleries>a:hover {
+    box-shadow: 0 24px 48px rgba(58, 35, 24, .2)
+}
+
+button,
+a {
+    transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+    transition-duration: .18s;
+    transition-timing-function: cubic-bezier(.22, 1, .36, 1)
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important
+    }
+}
