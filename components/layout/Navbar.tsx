@@ -11,6 +11,7 @@ export function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/walkthrough", label: "Walkthrough" },
+    { href: "/atlas", label: "Atlas" },
     { href: "/timeline", label: "Timeline" },
     { href: "/search", label: "Search" },
     { href: "/quiz", label: "Quiz" },

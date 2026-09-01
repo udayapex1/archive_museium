@@ -1,0 +1,135 @@
+[
+  {
+    "id": "event-great-bath",
+    "title": "Construction of the Great Bath at Mohenjo-daro",
+    "year": -2500,
+    "displayYear": "c. 2500 BCE",
+    "regionId": "indus-valley-civilization",
+    "placeId": "mohenjo-daro",
+    "coordinates": { "x": 275, "y": 295 },
+    "category": "monument-foundation",
+    "description": "Civic engineers in the citadel mound construct a 12-by-7 metre baked brick tank sealed with bitumen, representing one of the earliest public water structures in human history.",
+    "sources": [
+      {
+        "title": "Excavations at Mohenjo-daro",
+        "authorOrCitation": "Mackay, E.J.H. (1938), Government of India",
+        "type": "archaeological"
+      }
+    ],
+    "relatedExhibitId": "great-bath-mohenjo-daro"
+  },
+  {
+    "id": "event-ashoka-edicts",
+    "title": "Proclamation of Ashoka's Moral Edicts",
+    "year": -250,
+    "displayYear": "c. 250 BCE",
+    "regionId": "mauryan-empire",
+    "placeId": "sarnath",
+    "coordinates": { "x": 545, "y": 275 },
+    "category": "cultural-turning-point",
+    "description": "Following the Kalinga War, Ashoka commissions monolithic pillars and rock inscriptions promoting religious tolerance, non-violence, and social welfare throughout his realm.",
+    "sources": [
+      {
+        "title": "Inscriptions of Asoka",
+        "authorOrCitation": "Hultzsch, E. (1925), ASI",
+        "type": "epigraphic"
+      }
+    ],
+    "relatedExhibitId": "ashoka-pillar"
+  },
+  {
+    "id": "event-nalanda-foundation",
+    "title": "Foundation of Nalanda University",
+    "year": 450,
+    "displayYear": "c. 450 CE",
+    "regionId": "gupta-empire",
+    "placeId": "nalanda",
+    "coordinates": { "x": 595, "y": 285 },
+    "category": "cultural-turning-point",
+    "description": "Gupta monarchs patronize the establishment of a residential university that attracts thousands of scholars from Asia for monastic philosophy, linguistics, and mathematics.",
+    "sources": [
+      {
+        "title": "The University of Nalanda",
+        "authorOrCitation": "Sankalia, H.D. (1934), B.G. Paul & Co.",
+        "type": "academic"
+      }
+    ],
+    "relatedExhibitId": "nalanda-university"
+  },
+  {
+    "id": "event-taj-foundation",
+    "title": "Commencement of the Taj Mahal",
+    "year": 1632,
+    "displayYear": "1632 CE",
+    "regionId": "mughal-empire",
+    "placeId": "agra",
+    "coordinates": { "x": 420, "y": 260 },
+    "category": "monument-foundation",
+    "description": "Emperor Shah Jahan initiates construction of the white Makrana marble mausoleum for empress Mumtaz Mahal along the Yamuna riverfront.",
+    "sources": [
+      {
+        "title": "Padshahnama",
+        "authorOrCitation": "Abdul Hamid Lahori (trans. ASI records)",
+        "type": "primary"
+      }
+    ],
+    "relatedExhibitId": "taj-mahal"
+  },
+  {
+    "id": "event-redfort-foundation",
+    "title": "Foundation of the Red Fort in Shahjahanabad",
+    "year": 1639,
+    "displayYear": "1639 CE",
+    "regionId": "mughal-empire",
+    "placeId": "shahjahanabad",
+    "coordinates": { "x": 405, "y": 225 },
+    "category": "monument-foundation",
+    "description": "Shah Jahan lays the foundation of the massive red sandstone palace-fortress (Qila-i Mubarak) as the political anchor of his new capital.",
+    "sources": [
+      {
+        "title": "Shahjahanabad: The Sovereign City",
+        "authorOrCitation": "Blake, Stephen P. (1991)",
+        "type": "academic"
+      }
+    ],
+    "relatedExhibitId": "red-fort"
+  },
+  {
+    "id": "event-dandi-march",
+    "title": "The Salt Satyagraha Reaches Dandi",
+    "year": 1930,
+    "displayYear": "1930 CE",
+    "regionId": "modern-india-republic",
+    "placeId": "dandi",
+    "coordinates": { "x": 335, "y": 460 },
+    "category": "cultural-turning-point",
+    "description": "Gandhi completes the 24-day walk from Sabarmati to Dandi and breaks the British salt monopoly, sparking nationwide civil disobedience.",
+    "sources": [
+      {
+        "title": "The Collected Works of Mahatma Gandhi (Vol. 43)",
+        "authorOrCitation": "Publications Division, Ministry of Information & Broadcasting",
+        "type": "primary"
+      }
+    ],
+    "relatedExhibitId": "dandi-march"
+  },
+  {
+    "id": "event-chandrayaan3-landing",
+    "title": "Chandrayaan-3 Touches Down at Lunar South Pole",
+    "year": 2023,
+    "displayYear": "2023 CE",
+    "regionId": "modern-india-republic",
+    "placeId": "sriharikota",
+    "coordinates": { "x": 485, "y": 550 },
+    "category": "scientific-milestone",
+    "description": "The Vikram lander, launched from Sriharikota, makes history as the first spacecraft to soft-land in the Moon's south polar region at 'Shiva Shakti' point.",
+    "sources": [
+      {
+        "title": "Chandrayaan-3 Mission Report",
+        "authorOrCitation": "Indian Space Research Organisation (ISRO, August 2023)",
+        "type": "primary"
+      }
+    ],
+    "relatedExhibitId": "chandrayaan-missions"
+  }
+]

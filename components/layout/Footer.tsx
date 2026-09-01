@@ -60,6 +60,9 @@ export function Footer() {
               <Link href="/walkthrough" className="hover:text-white">
                 Walkthrough
               </Link>
+              <Link href="/atlas" className="hover:text-white">
+                Atlas
+              </Link>
               <Link href="/timeline" className="hover:text-white">
                 Timeline
               </Link>
