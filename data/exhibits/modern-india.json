@@ -1,22 +1,22 @@
 [
   {
     "id": "constitution-of-india",
-    "title": "Constitution of India",
+    "title": "Parliament House & Constitution of India",
     "gallery": "modern-india",
     "shortDescription": "A living promise of justice, liberty, equality and fraternity.",
-    "description": "The Constituent Assembly, chaired by Dr. Rajendra Prasad, began drafting India's constitution in December 1946 and worked for nearly three years, holding 11 sessions over 165 days. The Drafting Committee, headed by Dr. B.R. Ambedkar, shaped the final text after studying constitutions from around the world, including those of the UK, USA, Ireland and Canada. Adopted on 26 November 1949, it came into force on 26 January 1950 — a date chosen to honour Purna Swaraj Day, when the Indian National Congress had declared full independence in 1930. The Constitution established India as a sovereign, democratic republic with fundamental rights, directive principles of state policy, an independent judiciary and a federal structure with a strong centre.",
+    "description": "The Constituent Assembly, chaired by Dr. Rajendra Prasad, began drafting India's constitution in December 1946 in the Central Hall of Parliament House. The Drafting Committee, headed by Dr. B.R. Ambedkar, shaped the sovereign text establishing India as a democratic republic. This interactive 3D model presents the monumental circular Parliament House in New Delhi where India's constitutional journey was born.",
     "keyFacts": [
       "Constituent Assembly deliberations ran from December 1946 to November 1949",
       "Adopted on 26 November 1949 (celebrated as Constitution Day / Samvidhan Divas)",
-      "Came into force on 26 January 1950, now marked as Republic Day",
+      "Came into force on 26 January 1950, marked as Republic Day",
       "Dr. B.R. Ambedkar chaired the Drafting Committee",
-      "The original handwritten copies were calligraphed by Prem Behari Narain Raizada and illustrated by artists from Shantiniketan, including Nandalal Bose",
-      "It is the longest written constitution of any sovereign country, with 448 articles across 25 parts and 12 schedules today",
-      "The Preamble begins with \"We, the people of India\" and was amended in 1976 to add 'socialist', 'secular' and 'integrity'"
+      "The original handwritten copies were calligraphed by Prem Behari Narain Raizada and illustrated by artists from Shantiniketan",
+      "The longest written constitution of any sovereign country"
     ],
-    "image": "/images/constitution.svg",
-    "timelineYear": "1949",
-    "has3D": false,
+    "image": "/images/parliament.jpg",
+    "timelineYear": "1950",
+    "has3D": true,
+    "embedUrl": "https://sketchfab.com/models/f207f44b96f44a05bbf55a743c66e59b/embed",
     "hasAudio": false
   },
   {
@@ -24,15 +24,14 @@
     "title": "ISRO Achievements",
     "gallery": "modern-india",
     "shortDescription": "A story of space science built around practical problem-solving and public purpose.",
-    "description": "India's space effort began modestly in 1963 with a sounding rocket launched from Thumba, near Thiruvananthapuram, under the guidance of Dr. Vikram Sarabhai. The Indian National Committee for Space Research (INCOSPAR), formed in 1962, was reorganised into the Indian Space Research Organisation (ISRO) on 15 August 1969. Sarabhai believed space technology should serve national development rather than prestige alone — a philosophy that still shapes ISRO's mission mix of communication, navigation, weather and remote-sensing satellites alongside its launch vehicle and exploration programmes. The workhorse Polar Satellite Launch Vehicle (PSLV), the heavier GSLV and LVM3, and the indigenous NavIC navigation system reflect decades of steady, cost-conscious engineering that has made ISRO one of the most reliable and economical space agencies in the world.",
+    "description": "India's space effort began modestly in 1963 with a sounding rocket launched from Thumba, near Thiruvananthapuram, under the guidance of Dr. Vikram Sarabhai. The Indian National Committee for Space Research (INCOSPAR), formed in 1962, was reorganised into the Indian Space Research Organisation (ISRO) on 15 August 1969. Sarabhai believed space technology should serve national development rather than prestige alone — a philosophy that still shapes ISRO's mission mix.",
     "keyFacts": [
       "INCOSPAR founded in 1962; reorganised as ISRO on 15 August 1969",
       "Dr. Vikram Sarabhai is regarded as the father of the Indian space programme",
       "India's first sounding rocket was launched from Thumba in 1963",
-      "Aryabhata, India's first satellite, was built by ISRO and launched by a Soviet rocket in 1975",
-      "PSLV, first successfully flown in 1994, became renowned for reliability and low-cost launches",
-      "Mangalyaan (2013) made India the first Asian nation to reach Mars orbit, on its very first attempt",
-      "NavIC, India's own satellite navigation system, and the Gaganyaan human spaceflight programme mark ISRO's newer frontiers"
+      "Aryabhata, India's first satellite, was built by ISRO and launched in 1975",
+      "PSLV became renowned for exceptional reliability and low-cost launches",
+      "Mangalyaan (2013) made India the first Asian nation to reach Mars orbit on its first attempt"
     ],
     "image": "/images/isro.svg",
     "timelineYear": "1969",
@@ -40,22 +39,39 @@
     "hasAudio": false
   },
   {
+    "id": "statue-of-unity",
+    "title": "Statue of Unity",
+    "gallery": "modern-india",
+    "shortDescription": "The world's tallest monument honouring the political integration of India.",
+    "description": "Rising 182 metres along the Narmada river facing the Sardar Sarovar Dam, the Statue of Unity commemorates Sardar Vallabhbhai Patel, the first Deputy Prime Minister and Home Minister of independent India who united 562 princely states into the sovereign Indian union. This interactive 3D model presents the world-record colossus in its engineering detail.",
+    "keyFacts": [
+      "Inaugurated on 31 October 2018, the 143rd birth anniversary of Sardar Patel",
+      "World's tallest statue with a height of 182 metres (597 feet)",
+      "Designed by renowned Indian sculptor Ram V. Sutar",
+      "Engineered to withstand winds of up to 180 km/h and high-magnitude earthquakes",
+      "Built with over 70,000 tonnes of cement, 18,500 tonnes of reinforcement steel and 1,700 tonnes of bronze plates"
+    ],
+    "image": "/images/statue-of-unity.jpg",
+    "timelineYear": "2018",
+    "has3D": true,
+    "embedUrl": "https://sketchfab.com/models/05016de16ef445f1a18c062c5d92f1fb/embed",
+    "hasAudio": false
+  },
+  {
     "id": "chandrayaan-missions",
     "title": "Chandrayaan Missions",
     "gallery": "modern-india",
     "shortDescription": "Lunar exploration that placed Indian science at the centre of a new space age.",
-    "description": "Chandrayaan-1, launched on 22 October 2008 aboard a PSLV rocket, orbited the Moon and carried instruments from ISRO, NASA, ESA and Bulgaria. Its Moon Impact Probe and the NASA-supplied Moon Mineralogy Mapper together provided evidence of hydroxyl and water molecules on the lunar surface, a landmark finding in planetary science. Chandrayaan-2, launched on 22 July 2019, placed an orbiter successfully around the Moon, though its Vikram lander crashed during descent in September 2019. Chandrayaan-3, launched on 14 July 2023 aboard the LVM3 rocket, corrected that setback: its Vikram lander touched down in the Moon's south polar highlands on 23 August 2023 at 6:04 pm IST, deploying the Pragyan rover the next day. The achievement made India the fourth country to soft-land on the Moon and the first to do so near the lunar south pole — a region prized for its permanently shadowed craters that may hold water ice. Prime Minister Narendra Modi later named the landing site 'Shiva Shakti'.",
+    "description": "Chandrayaan-1, launched on 22 October 2008 aboard a PSLV rocket, orbited the Moon and helped confirm water molecules on the lunar surface. Chandrayaan-3, launched on 14 July 2023 aboard the LVM3 rocket, achieved history: its Vikram lander touched down in the Moon's south polar highlands on 23 August 2023 at 6:04 pm IST, deploying the Pragyan rover. The achievement made India the fourth country to soft-land on the Moon and the first to do so near the lunar south pole.",
     "keyFacts": [
-      "Chandrayaan-1 launched 22 October 2008; helped confirm water molecules on the Moon",
-      "Chandrayaan-2 launched 22 July 2019; its orbiter succeeded even though the Vikram lander crashed",
+      "Chandrayaan-1 launched 22 October 2008; confirmed water molecules on the Moon",
       "Chandrayaan-3 launched 14 July 2023 on the LVM3 rocket from Sriharikota",
       "Vikram lander soft-landed near the lunar south pole on 23 August 2023, at 6:04 pm IST",
-      "India became the fourth nation to soft-land on the Moon and the first near the south pole",
-      "The Vikram lander and Pragyan rover carried instruments to study lunar soil, seismic activity and the thin atmosphere",
-      "23 August is now marked in India as National Space Day"
+      "India became the first nation to land in the lunar south polar region",
+      "23 August is officially commemorated in India as National Space Day"
     ],
     "image": "https://res.cloudinary.com/dwemivxbp/image/upload/v1788026711/vikarmLanderChandrayan_fh1y7z.jpg",
-    "timelineYear": "2008",
+    "timelineYear": "2023",
     "has3D": true,
     "embedUrl": "https://sketchfab.com/models/52f548f401584fd9abe0fa5336e45e74/embed",
     "hasAudio": true,
@@ -66,14 +82,12 @@
     "title": "Digital India",
     "gallery": "modern-india",
     "shortDescription": "Infrastructure and public services imagined for a connected, mobile-first nation.",
-    "description": "Launched on 1 July 2015, Digital India is built around three vision areas: digital infrastructure as a core utility for every citizen, governance and services on demand, and digital empowerment through literacy and universal access. It rests on pillars such as broadband highways, mobile connectivity, e-governance and e-Kranti (electronic delivery of services), alongside programmes for domestic electronics manufacturing and IT-sector jobs. The Unified Payments Interface (UPI), launched by the National Payments Corporation of India in 2016, became one of the initiative's most visible successes, enabling instant, interoperable digital payments across banks and apps at massive scale. The Aadhaar digital identity system, DigiLocker for storing official documents, and the CoWIN platform used during the COVID-19 vaccination drive are often cited as further outcomes of this push. Questions about digital access in rural areas, data privacy and the digital divide remain part of the ongoing conversation around the programme.",
+    "description": "Launched on 1 July 2015, Digital India is built around three vision areas: digital infrastructure as a core utility for every citizen, governance and services on demand, and digital empowerment through literacy and universal access. The Unified Payments Interface (UPI), launched by NPCI in 2016, enabled instant digital payments at massive scale.",
     "keyFacts": [
       "Officially launched on 1 July 2015",
-      "Built on nine pillars, including broadband highways, e-governance and e-Kranti",
+      "Built on nine pillars, including broadband highways and e-Kranti",
       "UPI, launched in 2016 by NPCI, enabled interoperable real-time digital payments",
-      "Aadhaar and DigiLocker are widely used identity and document-storage components linked to the initiative",
-      "CoWIN, used to manage India's COVID-19 vaccination drive, is often cited as a Digital India success story",
-      "Digital inclusion, rural connectivity and data privacy remain continuing challenges"
+      "Aadhaar and DigiLocker provide universal digital identity and document infrastructure"
     ],
     "image": "/images/digital.svg",
     "timelineYear": "2015",
