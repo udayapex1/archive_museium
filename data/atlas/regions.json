@@ -217,6 +217,47 @@
     "relatedExhibitIds": ["taj-mahal", "red-fort", "akbar-the-great", "mughal-paintings-architecture"]
   },
   {
+    "id": "british-era",
+    "name": "British Indian Empire",
+    "nativeOrAlternateName": "British Raj & Princely States",
+    "type": "empire",
+    "era": "modern-india",
+    "startYear": 1858,
+    "endYear": 1947,
+    "displayPeriod": "1858 – 1947 CE",
+    "capitalPlaceId": "new-delhi",
+    "colorTheme": "#b25651",
+    "shortDescription": "Direct Crown rule over the provinces of British India alongside treaties with over five hundred autonomous Princely States.",
+    "curatorNarrative": "Following the 1857 rebellion, governance transferred from the East India Company directly to the British Crown. The Raj linked the subcontinent through railways, telegraph lines, and canal networks, while generating widespread anti-colonial mobilization from the early Swadeshi movements to Gandhi's nonviolent satyagraha campaigns and the 1930 Salt March.",
+    "certainty": "well-supported",
+    "certaintyNote": "Extensively documented administrative boundaries covering British provinces and allied Princely States.",
+    "modernGeography": {
+      "primaryPresentCountry": "India, Pakistan, Bangladesh, Myanmar",
+      "modernStatesOrProvinces": ["Subcontinent-wide"],
+      "modernRelationshipNote": "Encompassed modern India, Pakistan, and Bangladesh, with Burma administered under the same framework until 1937."
+    },
+    "mapCoordinates": {
+      "center": [440, 310],
+      "pathData": ""
+    },
+    "sources": [
+      {
+        "title": "The Oxford History of the British Empire",
+        "authorOrCitation": "Brown, Judith M. (1999), Oxford University Press",
+        "type": "academic",
+        "note": "Comprehensive survey of colonial governance, administrative boundaries, and constitutional developments."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "dandi",
+        "targetType": "place",
+        "label": "Site of the 1930 Salt March culmination"
+      }
+    ],
+    "relatedExhibitIds": ["dandi-march", "mahatma-gandhi"]
+  },
+  {
     "id": "modern-india-republic",
     "name": "Republic of India & Modern Journey",
     "nativeOrAlternateName": "Bharat Ganrajya",

@@ -139,20 +139,46 @@
     ]
   },
   {
-    "id": "period-modern",
-    "name": "Resistance, Republic & Scientific Frontiers",
-    "startYear": 1930,
-    "endYear": 2024,
-    "displayPeriod": "1930 – Present",
+    "id": "period-british",
+    "name": "Colonial Horizon & Freedom Struggle",
+    "startYear": 1858,
+    "endYear": 1947,
+    "displayPeriod": "1858 – 1947 CE",
     "era": "modern-india",
-    "description": "From mass civil disobedience on coastal salt marshes to constitutional democracy and planetary exploration, modern India combines heritage with technological self-reliance.",
-    "subcontinentHeadline": "The arc bends from colonial resistance (1930 Salt March) to constitutional governance (1950) and lunar polar landing (2023).",
+    "description": "The era of direct Crown administration, railway expansion, and mass nationalist mobilization leading to independence.",
+    "subcontinentHeadline": "Subcontinent unified under imperial administration and princely treaties, met by nationwide anti-colonial resistance.",
+    "globalContemporaries": [
+      {
+        "id": "gc-british-victorian",
+        "region": "Europe",
+        "civilizationOrState": "Victorian & Industrial Britain",
+        "title": "Industrial Expansion & Pax Britannica",
+        "description": "Rapid expansion of steam rail networks, naval power, and global telegraph cables."
+      },
+      {
+        "id": "gc-british-meiji",
+        "region": "East Asia",
+        "civilizationOrState": "Meiji Restoration Japan",
+        "title": "Modernization & Industrialization",
+        "description": "Japan rapidly transforms into a modern constitutional and industrial power."
+      }
+    ]
+  },
+  {
+    "id": "period-modern",
+    "name": "Republic of India & Scientific Horizons",
+    "startYear": 1947,
+    "endYear": 2024,
+    "displayPeriod": "1947 – Present",
+    "era": "modern-india",
+    "description": "Sovereign constitutional democracy, industrialization, digital public infrastructure, and planetary exploration.",
+    "subcontinentHeadline": "A sovereign democratic republic emerges, pioneering non-alignment, green revolution, and space missions.",
     "globalContemporaries": [
       {
         "id": "gc-modern-space",
         "region": "Americas",
         "civilizationOrState": "United States & Global Space Age",
-        "title": "Apollo, Artemis & Global Space Exploration",
+        "title": "Apollo, Artemis & Space Exploration",
         "description": "Humanity lands on the Moon (1969) and later establishes international robotic lunar networks searching for polar water ice."
       },
       {

@@ -16,8 +16,8 @@ const MILESTONES = [
   { year: -250, label: '250 BCE', name: 'Maurya' },
   { year: 450, label: '450 CE', name: 'Gupta' },
   { year: 1632, label: '1632 CE', name: 'Mughal' },
-  { year: 1930, label: '1930 CE', name: 'Salt March' },
-  { year: 2023, label: '2023 CE', name: 'Space Age' },
+  { year: 1900, label: '1900 CE', name: 'British Era' },
+  { year: 2023, label: '2023 CE', name: 'Modern Republic' },
 ];
 
 export function TimeSlider({
