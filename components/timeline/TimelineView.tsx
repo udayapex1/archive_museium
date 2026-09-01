@@ -122,7 +122,7 @@ export const TIMELINE_ERAS: TimelineEra[] = [
     timeSpan: 'c. 322 – 185 BCE',
     startYear: -322,
     endYear: -185,
-    representativeImage: '/images/ashoka.svg',
+    representativeImage: '/images/konark-wheel.jpg',
     headline: 'First imperial unification spanning from the Hindu Kush to the Karnataka plateau, pioneering moral governance and edicts on stone pillars.',
     curatorNarrative: 'Founded in Magadha by Chandragupta Maurya and codified philosophically through Chanakya’s Arthashastra, the empire expanded across nearly the entire subcontinent before undergoing an unprecedented moral turn under Ashoka the Great.',
     colorTheme: '#8c2d19',
@@ -165,7 +165,7 @@ export const TIMELINE_ERAS: TimelineEra[] = [
         relatedExhibit: {
           id: 'ashoka-pillar',
           title: 'Lion Capital of Ashoka',
-          image: '/images/maurya-pillar.jpg',
+          image: '/images/ashok-pillar.jpg',
           has3D: true,
           shortDescription: 'Interactive 3D model of the Sarnath lion capital and polished sandstone edict pillars.',
         },
@@ -353,7 +353,7 @@ export const TIMELINE_ERAS: TimelineEra[] = [
         relatedExhibit: {
           id: 'mahatma-gandhi',
           title: 'Mahatma Gandhi & Satyagraha',
-          image: '/images/gandhi.svg',
+          image: '/images/gandhi.jpg',
           has3D: false,
           shortDescription: 'The philosophical framework of truth, non-violence, and mass civic action.',
         },
@@ -458,7 +458,7 @@ export const TIMELINE_ERAS: TimelineEra[] = [
         relatedExhibit: {
           id: 'isro-foundation',
           title: 'Foundation of ISRO',
-          image: '/images/isro.svg',
+          image: '/images/isro.jpg',
           has3D: false,
           shortDescription: 'Pioneering space research dedicated to societal development and technological self-reliance.',
         },
