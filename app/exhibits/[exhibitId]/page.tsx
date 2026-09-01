@@ -57,6 +57,11 @@ const exhibitEditorial: Record<string, { label: string; milestones: string[]; qu
     milestones: ['COMMEMORATION · 2018', 'KEVADIA · GUJARAT', '182M COLOSSUS'],
     quote: 'Honouring Sardar Vallabhbhai Patel, the architect of modern India who unified hundreds of princely states into one nation.'
   },
+  'konark-sun-temple': {
+    label: 'Kalinga Architecture · c. 1250 CE',
+    milestones: ['EASTERN GANGA DYNASTY · 1250 CE', 'KONARK · ODISHA', 'COSMIC CHARIOT'],
+    quote: '“Here the language of stone surpasses the language of human art.” — Rabindranath Tagore on the monumentality of Konark.'
+  },
   'chandrayaan-missions': {
     label: 'Lunar mission · 2008—2023',
     milestones: ['CHANDRAYAAN-1 · 2008', 'CHANDRAYAAN-2 · 2019', 'CHANDRAYAAN-3 · 2023'],
