@@ -1,103 +1,97 @@
-# Pull Request & Upstream Merge Guide: The Historical Atlas
+# Pull Request & Upstream Merge Guide: The Archive Digital Museum
 
 > **Feature Branch**: `feature/historical-atlas`  
 > **Target Branch**: `main`  
 > **Target Repository**: `udayapex1/archive_museium`  
-> **PR Title**: `feat(atlas): The Historical Atlas — Interactive Cartography, Civilizational Horizons & Global Context`
+> **PR Title**: `feat(museum): Historical Atlas integration, Chronological Timeline overhaul & streamlined navigation`
 
 ---
 
 ## 1. Executive Summary & Value Proposition
 
-Prior to this contribution, **The Archive Digital Museum** featured rich 3D artifact exhibits, an ambient film walkthrough, and a chronological timeline, but lacked a **spatial dimension**. Visitors had no way to explore where ancient and medieval polities actually existed, how frontiers shifted across epochs, or how ancient sites relate to modern South Asian geography.
+This contribution addresses the two major missing dimensions of **The Archive Digital Museum**:
 
-**The Historical Atlas (Gallery 04)** introduces an authentic, interactive historical political atlas directly integrated into the museum's design system:
-- Spans **5,000 years** of history from 2500 BCE Harappan urbanism to the 2023 lunar polar landing.
-- Built upon **real physical geography** (Natural Earth 1:10m river systems & coastlines, plus full 1:110m world continental landmass).
-- Respects **authentic civilizational footprints** across Afghanistan, Pakistan, India, Bangladesh, and Myanmar without artificially clipping to modern partition lines.
-- Introduces synchronous global context (**"What else was happening?"**) connecting Indian milestones with contemporary Egyptian, Mesopotamian, Mediterranean, and East Asian developments.
-- Connects directly to existing museum 3D exhibits (*Great Bath, Ashokan Pillars, Taj Mahal, Red Fort, Chandrayaan-3*).
+1. **Spatial Dimension (Gallery 04 · The Historical Atlas)**:
+   - Visitors can now explore 5,000 years of the Indian subcontinent on an interactive, Natural Earth 1:10m physical basemap with authentic cross-border civilizational extents across Afghanistan, Pakistan, India, Bangladesh, and Myanmar.
+   - Synchronous global context drawer (**"What else was happening?"**) connecting Indian epochs with contemporary Egyptian, Mesopotamian, Mediterranean, and East Asian milestones.
+
+2. **Temporal Dimension (Room 03 · The Historical Timeline Overhaul)**:
+   - The timeline has been elevated from a simple 4-card list into the museum's primary chronological passage.
+   - Organizes five millennia into **06 curated epochs** (Indus, Maurya, Gupta, Mughal, British Era, Modern Republic).
+   - Features 14 pivotal turning points with primary archaeological/historical source citations, interactive epoch filtering, and direct links to both 3D museum exhibits and the Historical Atlas.
+
+3. **Streamlined Museum Architecture**:
+   - The redundant 3D "Walkthrough" page has been cleanly removed.
+   - The navigation is now focused, intentional, and balanced:  
+     `Home | Atlas | Timeline | Search | Quiz`
 
 ---
 
 ## 2. Changes & File Architecture
 
-This PR is **100% non-breaking and additive**. Only two existing files were touched by single navigation links; all other functionality is isolated in modular directories.
+### Clean Navigation & Walkthrough Removal
+- Removed `app/walkthrough/page.tsx`, `components/walkthrough/`, and `lib/walkthroughLayout.ts`.
+- Updated `components/layout/Navbar.tsx` and `components/layout/Footer.tsx` so the navigation cleanly reads `Home | Atlas | Timeline | Search | Quiz`, with "Enter museum" leading to the Atlas.
+- Updated `app/page.tsx` hero CTA from Walkthrough to The Historical Atlas.
 
-### Modified Existing Files (2 files, 4 lines total)
-- `components/layout/Navbar.tsx`: Added `{ href: "/atlas", label: "Atlas" }` to the navigation menu.
-- `components/layout/Footer.tsx`: Added `<Link href="/atlas">Atlas</Link>` under the footer Explore links.
+### Overhauled Timeline Experience
+- Added `components/timeline/TimelineView.tsx` with rich epoch banners, historical citations, global context callouts, and 3D exhibit cards.
+- Updated `app/timeline/page.tsx` to render the museum-grade timeline with SEO metadata.
 
-### New Modules & Data Assets (16 files)
-```
-app/
-└── atlas/
-    └── page.tsx                    # Next.js route for /atlas (SSR-safe dynamic loader)
-components/
-└── atlas/
-    ├── AtlasView.tsx               # Main layout coordinator (header, margins, time dock)
-    ├── HistoricalMap.tsx           # High-performance SVG vector map with pan, zoom & textures
-    ├── TimeSlider.tsx              # Temporal scrubber (-2500 BCE to 2023 CE + autoplay)
-    ├── EntityDetailDrawer.tsx      # Curatorial drawer with "Then ↔ Now" & 3D exhibit links
-    └── GlobalContextPanel.tsx      # "What else was happening?" synchronous drawer
-data/
-└── atlas/
-    ├── basemap.json                # Vector reference paths
-    ├── events.json                 # Curated turning points & milestones
-    ├── periods.json                # Temporal horizons & global contemporary data
-    ├── places.json                 # Historical cities, ports, metropolises & coordinates
-    ├── regions.json                # Civilizational polities, narratives, and sources
-    ├── south-asia-geography.json   # Natural Earth 1:10m coastlines, borders & major rivers
-    └── world-land.json             # Natural Earth 1:110m world continental landmass
-lib/
-├── atlasData.ts                    # Query functions for active eras, regions, and places
-└── atlasTypes.ts                   # Comprehensive TypeScript contracts and interfaces
-scripts/
-└── extract-atlas-geodata.mjs       # Reproducible CLI script for geodata extraction
-```
+### The Historical Atlas (Gallery 04)
+- Added `app/atlas/page.tsx` and modular components under `components/atlas/` (`HistoricalMap.tsx`, `AtlasView.tsx`, `TimeSlider.tsx`, `EntityDetailDrawer.tsx`, `GlobalContextPanel.tsx`).
+- Natural Earth vector datasets under `data/atlas/` (`south-asia-geography.json`, `world-land.json`, `periods.json`, `regions.json`, `events.json`, `places.json`).
 
 ---
 
 ## 3. Compatibility & Zero-Risk Guarantee
 
 | Checkpoint | Status | Details |
-| :--- | :--- | :--- |
-| **Breaking Changes** | **NONE** | No existing routes, components, or database schemas were altered. |
-| **New Dependencies** | **ZERO** | Uses existing React, Lucide Icons, and Tailwind CSS. No heavy GIS/Mapbox/Leaflet libraries added. |
+| :--- | :---: | :--- |
+| **Breaking Changes** | **NONE** | Existing exhibits, galleries, 3D models, search, and quiz remain 100% intact. |
+| **New Dependencies** | **ZERO** | Uses existing React, Lucide Icons, and Tailwind CSS. No heavy external GIS/Mapbox libraries. |
 | **TypeScript Strictness** | **PASSED** | `npx tsc --noEmit` exits with **0 errors**. |
-| **Production Build** | **PASSED** | `npm run build` generates all 16 static routes successfully. |
-| **Static Export Compatibility**| **PASSED** | Compiled static assets in `out/atlas.html` ready for Vercel, Netlify, or GitHub Pages. |
-| **Responsive & Touch Safe**| **PASSED** | Pan, pinch/wheel zoom, and drawer slide work seamlessly across desktop, tablet, and mobile viewports. |
+| **Production Build** | **PASSED** | `npm run build` generates all 15 static routes successfully. |
+| **Static Export (`out/`)** | **PASSED** | Compiled static assets in `out/` ready for immediate deployment on Vercel or GitHub Pages. |
+| **Responsive & Touch Safe**| **PASSED** | Both Atlas and Timeline are responsive across mobile, tablet, and widescreen viewports. |
 
 ---
 
-## 4. Instructions for Maintainers (How to Review & Merge)
+## 4. GitHub Contributor Visibility & Attribution Notes
+
+If contributor avatars or statistics take time to appear on the repository home page:
+1. **Default Branch Requirement**: GitHub's main repository page only credits contributors whose commits are merged into the repository's **default branch** (`main`). Once this PR is merged into `main`, GitHub begins attribution calculation.
+2. **Email Association**: Ensure that the commit author email (`lakshyadharkar@gmail.com`) is added and verified in the contributor's GitHub account settings (`Settings -> Emails`).
+3. **GitHub Background Propagation**: GitHub computes the repository contributors list asynchronously. It may take between 1 hour to 24 hours after merging into `main` for the right-hand sidebar contributor list to refresh.
+4. **Merge Method**: When merging on GitHub, select **"Create a merge commit"** or **"Rebase and merge"** to preserve the contributor's individual commit signatures. If choosing **"Squash and merge"**, ensure the commit author field is set to `Httpslakshya <lakshyadharkar@gmail.com>`.
+
+---
+
+## 5. Instructions for Maintainers (How to Review & Merge)
 
 ### Option A: Merge via GitHub Web UI (Recommended)
-1. Open the Pull Request on GitHub from `Httpslakshya/archive_museiumm:feature/historical-atlas` into `udayapex1/archive_museium:main`.
-2. Verify that GitHub shows: **"Able to merge. These branches can be automatically merged."**
-3. Review files: Notice that only `Navbar.tsx` and `Footer.tsx` modify existing code.
-4. Click **Squash and merge** or **Create a merge commit**.
+1. Open the Pull Request on GitHub from `Httpslakshya/archive_museium:feature/historical-atlas` into `udayapex1/archive_museium:main`.
+2. Verify that GitHub confirms: **"Able to merge. These branches can be automatically merged."**
+3. Review changes and merge.
 
 ### Option B: Local Review & CLI Merge
 ```bash
 # 1. Fetch the feature branch from the contributor's fork
-git remote add contributor https://github.com/Httpslakshya/archive_museiumm.git
+git remote add contributor https://github.com/Httpslakshya/archive_museium.git
 git fetch contributor feature/historical-atlas
 
 # 2. Checkout and test locally
 git checkout -b review/historical-atlas contributor/feature/historical-atlas
 npm install
 npm run dev
-# Visit http://localhost:3000/atlas to explore the interactive map
 
 # 3. Verify TypeScript and production build
 npx tsc --noEmit
 npm run build
 
-# 4. Merge into your main branch
+# 4. Merge into main
 git checkout main
-git merge --no-ff review/historical-atlas -m "merge: integrate The Historical Atlas feature"
+git merge --no-ff review/historical-atlas -m "merge: integrate The Historical Atlas and Timeline overhaul"
 
 # 5. Push to origin
 git push origin main
@@ -105,14 +99,12 @@ git push origin main
 
 ---
 
-## 5. Verification Checklist for the Maintainer
+## 6. Verification Checklist for the Maintainer
 
-Once running locally (`npm run dev`), visit `http://localhost:3000/atlas`:
+Once running locally (`npm run dev`):
 
-- [ ] **Visual Theme**: The page background uses the museum's `--paper: #f7f1e8` with the subtle `.grain` texture.
-- [ ] **Framed Layout**: The map has balanced margins on the left and right, with rounded corners and museum drop shadow.
-- [ ] **Temporal Navigation**: Clicking the milestones (Indus, Maurya, Gupta, Mughal, British Era, Modern Republic) updates territorial washes, active cities, and contemporary global cards.
-- [ ] **Cross-Border Horizons**: Mauryan wash extends across Afghanistan, Pakistan, and Bangladesh; Indus Valley covers Sindh, Balochistan, Punjab, and Gujarat.
-- [ ] **Modern Reference Toggle**: Clicking the Eye icon toggles modern reference lines; zooming in reveals state and provincial names (*Punjab, Sindh, Rajasthan, Gujarat, Kabul, etc.*).
-- [ ] **Curatorial Links**: Clicking on a city (e.g. *Mohenjo-daro*, *Pataliputra*, *Agra*) opens the side drawer showing "Now" geography and direct links to 3D museum models.
-- [ ] **Original Pages**: Check `/`, `/walkthrough`, `/galleries/ancient-india`, `/timeline`, `/quiz` — all existing functionality remains 100% intact.
+- [ ] **Navigation Bar**: Displays `Home | Atlas | Timeline | Search | Quiz` (Walkthrough cleanly removed).
+- [ ] **Historical Atlas (`/atlas`)**: Natural Earth physical geography, cross-border horizons, milestone selector, modern borders toggle on zoom, and drawer context.
+- [ ] **Historical Timeline (`/timeline`)**: 6 historical epochs with curatorial headers, jump buttons, 14 turning points, primary sources, and 3D exhibit cards.
+- [ ] **Direct Cross-Links**: Clicking "View in Historical Atlas" from Timeline opens the map with that exact era and year selected.
+- [ ] **Existing Galleries & Exhibits**: Check `/`, `/galleries/ancient-india`, `/exhibits/great-bath-mohenjo-daro`, `/search`, `/quiz` — all work cleanly.
