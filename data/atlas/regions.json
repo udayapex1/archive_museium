@@ -1,0 +1,270 @@
+[
+  {
+    "id": "indus-valley-civilization",
+    "name": "Indus Valley Civilization",
+    "nativeOrAlternateName": "Harappan Civilization · Sindhu-Sarasvati",
+    "type": "civilization",
+    "era": "ancient-india",
+    "startYear": -2600,
+    "endYear": -1900,
+    "displayPeriod": "c. 2600 – 1900 BCE",
+    "capitalPlaceId": "mohenjo-daro",
+    "colorTheme": "#b45c3c",
+    "shortDescription": "A vast network of planned urban settlements linked by river trade, craft specialization, and sophisticated hydraulic engineering.",
+    "curatorNarrative": "Around five millennia ago, the Indus and Ghaggar-Hakra river basins fostered one of the world's primary urban civilizations. Without royal palaces or militaristic monuments, Harappan cities emphasized civic infrastructure: baked-brick drainage, standardized weights, public baths, and grain storage. Maritime trade connected coastal outposts like Lothal with Oman and Mesopotamian ports.",
+    "certainty": "well-supported",
+    "certaintyNote": "Major urban nodes and river basin zones are confirmed by extensive archaeological excavations; peripheral seasonal trading settlements remain approximate.",
+    "modernGeography": {
+      "primaryPresentCountry": "Pakistan & India",
+      "modernStatesOrProvinces": ["Sindh", "Punjab (PK)", "Balochistan", "Gujarat", "Rajasthan", "Haryana", "Punjab (IN)"],
+      "modernRelationshipNote": "Broadly corresponds to parts of present-day eastern and southern Pakistan, and northwestern India along the Ghaggar-Hakra and Indus drainage systems."
+    },
+    "mapCoordinates": {
+      "center": [320, 270],
+      "pathData": "M 240,190 C 270,160 330,170 370,195 C 410,220 425,260 410,310 C 390,360 410,410 395,445 C 375,470 325,480 300,450 C 280,410 270,360 250,330 C 220,290 215,225 240,190 Z"
+    },
+    "sources": [
+      {
+        "title": "Ancient Cities of the Indus Valley Civilization",
+        "authorOrCitation": "Kenoyer, Jonathan Mark (1998), Oxford University Press",
+        "type": "archaeological",
+        "note": "Standard reference on Harappan urban planning, craft technologies, and settlement distribution."
+      },
+      {
+        "title": "The Indus Civilization: A Contemporary Perspective",
+        "authorOrCitation": "Possehl, Gregory L. (2002), AltaMira Press",
+        "type": "academic",
+        "note": "Analysis of chronology, trade routes with Mesopotamia, and hydraulic architecture."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "mohenjo-daro",
+        "targetType": "place",
+        "label": "Premier urban citadel and site of the Great Bath"
+      },
+      {
+        "targetId": "great-bath-mohenjo-daro",
+        "targetType": "exhibit",
+        "label": "Explore 3D archaeological reconstruction in the museum"
+      }
+    ],
+    "relatedExhibitIds": ["great-bath-mohenjo-daro", "indus-valley-civilization"]
+  },
+  {
+    "id": "mauryan-empire",
+    "name": "Mauryan Empire",
+    "nativeOrAlternateName": "Maurya Samrajya",
+    "type": "empire",
+    "era": "ancient-india",
+    "startYear": -322,
+    "endYear": -185,
+    "displayPeriod": "c. 322 – 185 BCE",
+    "capitalPlaceId": "pataliputra",
+    "colorTheme": "#8c4428",
+    "shortDescription": "The first pan-subcontinental empire, celebrated for administrative centralized statecraft and Ashoka's ethical edicts on stone.",
+    "curatorNarrative": "From its nucleus in Magadha, the Mauryan dynasty unified vast territories from modern Afghanistan to Karnataka. Under Emperor Ashoka, following the trauma of the Kalinga War, imperial policy shifted toward 'dhamma-vijaya' (conquest through moral righteousness). Polished monolithic pillars carrying four lions and ethical proclamations in Brahmi, Kharoshthi, Greek, and Aramaic were erected across imperial highways.",
+    "certainty": "well-supported",
+    "certaintyNote": "Imperial extent is substantiated by find-spots of Ashokan Major and Minor Rock Edicts; southern boundary near Mysore is well-attested as an autonomous frontier.",
+    "modernGeography": {
+      "primaryPresentCountry": "India, Pakistan, Afghanistan, Bangladesh",
+      "modernStatesOrProvinces": ["Bihar", "Uttar Pradesh", "Madhya Pradesh", "Odisha", "Punjab", "Khyber Pakhtunkhwa", "Kandahar", "Karnataka"],
+      "modernRelationshipNote": "Broadly encompasses almost the entirety of modern India, Pakistan, eastern Afghanistan, Bangladesh, and southern Nepal, excluding only the southernmost tip of the peninsula."
+    },
+    "mapCoordinates": {
+      "center": [440, 310],
+      "pathData": "M 190,140 C 260,110 390,120 460,160 C 560,180 660,250 670,330 C 660,390 600,430 550,490 C 510,540 480,590 450,580 C 420,550 430,490 380,450 C 330,440 290,410 270,360 C 230,300 160,200 190,140 Z"
+    },
+    "sources": [
+      {
+        "title": "Aśoka and the Decline of the Mauryas",
+        "authorOrCitation": "Thapar, Romila (1997), Oxford University Press",
+        "type": "academic",
+        "note": "Critical analysis of Ashokan epigraphy, imperial administration, and political frontiers."
+      },
+      {
+        "title": "A History of Ancient and Early Medieval India",
+        "authorOrCitation": "Singh, Upinder (2008), Pearson Education",
+        "type": "academic",
+        "note": "Comprehensive map synthesis of rock and pillar edict locations across South Asia."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "pataliputra",
+        "targetType": "place",
+        "label": "Imperial capital and administrative nucleus"
+      },
+      {
+        "targetId": "sarnath",
+        "targetType": "place",
+        "label": "Site of the Ashoka Pillar and Lion Capital"
+      },
+      {
+        "targetId": "ashoka-pillar",
+        "targetType": "exhibit",
+        "label": "View exhibit of the Lion Capital"
+      }
+    ],
+    "relatedExhibitIds": ["ashoka-pillar"]
+  },
+  {
+    "id": "gupta-empire",
+    "name": "Gupta Empire",
+    "nativeOrAlternateName": "Gupta Samrajya",
+    "type": "empire",
+    "era": "ancient-india",
+    "startYear": 319,
+    "endYear": 550,
+    "displayPeriod": "c. 319 – 550 CE",
+    "capitalPlaceId": "pataliputra",
+    "colorTheme": "#b27329",
+    "shortDescription": "A transformative era of mathematical innovation, Sanskrit classicism, and international monastic universities.",
+    "curatorNarrative": "Centred in the Gangetic heartland with a secondary western capital at Ujjayini, the Gupta realm nurtured a vibrant synthesis of statehood and scholarship. Here, Aryabhata calculated the solar year and pi, Kalidasa composed classical poetry, and Nalanda arose as a residential intellectual capital hosting students from China, Korea, and Central Asia.",
+    "certainty": "approximate",
+    "certaintyNote": "Core Gangetic territories directly administered; peripheral kingdoms in the Deccan paid tribute rather than enduring direct bureaucratic annexation.",
+    "modernGeography": {
+      "primaryPresentCountry": "India, Bangladesh, Pakistan",
+      "modernStatesOrProvinces": ["Bihar", "Uttar Pradesh", "Madhya Pradesh", "Bengal", "Gujarat", "Punjab"],
+      "modernRelationshipNote": "Broadly covered northern and central India and parts of Bengal, with tributary alliances extending south into the Deccan."
+    },
+    "mapCoordinates": {
+      "center": [470, 290],
+      "pathData": "M 270,220 C 350,180 470,190 560,220 C 640,245 680,310 650,360 C 610,400 540,410 470,410 C 390,415 330,440 290,400 C 260,350 240,280 270,220 Z"
+    },
+    "sources": [
+      {
+        "title": "The Classical Age (History and Culture of the Indian People)",
+        "authorOrCitation": "Majumdar, R.C. & Pusalker, A.D. (1954), Bharatiya Vidya Bhavan",
+        "type": "academic",
+        "note": "Standard political and cultural survey of Gupta administrative limits and tributary states."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "nalanda",
+        "targetType": "place",
+        "label": "Cosmopolitan international university"
+      },
+      {
+        "targetId": "nalanda-university",
+        "targetType": "exhibit",
+        "label": "Explore Nalanda exhibit in the museum"
+      }
+    ],
+    "relatedExhibitIds": ["nalanda-university"]
+  },
+  {
+    "id": "mughal-empire",
+    "name": "Mughal Empire (Imperial Zenith)",
+    "nativeOrAlternateName": "Gurkani Realm · Saltanat-e-Mughlia",
+    "type": "empire",
+    "era": "mughal-era",
+    "startYear": 1526,
+    "endYear": 1707,
+    "displayPeriod": "1526 – 1707 CE",
+    "capitalPlaceId": "shahjahanabad",
+    "colorTheme": "#526353",
+    "shortDescription": "An imperial culture renowned for administrative centralization, red sandstone citadels, and garden-mausoleums in white marble.",
+    "curatorNarrative": "At its height under Akbar, Jahangir, and Shah Jahan, the Mughal Empire presided over one of the world's most populous and economically productive realms. Revenue and bureaucratic centralization (the mansabdari system) enabled staggering patronage of architecture, miniature painting, and interfaith translation. Shah Jahan's foundation of Shahjahanabad and the Taj Mahal in Agra crystallized this imperial synthesis.",
+    "certainty": "well-supported",
+    "certaintyNote": "Extensively documented through imperial administrative gazetteers (Ain-i-Akbari), European traveler accounts, and surviving monumental works.",
+    "modernGeography": {
+      "primaryPresentCountry": "India, Pakistan, Bangladesh, Afghanistan",
+      "modernStatesOrProvinces": ["Delhi", "Uttar Pradesh", "Punjab", "Rajasthan", "Madhya Pradesh", "Gujarat", "Bengal", "Sindh", "Kabul"],
+      "modernRelationshipNote": "Broadly encompassed almost the entire northern, central, and western subcontinent at its height, extending toward Kabul and later into the Deccan."
+    },
+    "mapCoordinates": {
+      "center": [430, 290],
+      "pathData": "M 220,130 C 310,120 430,130 500,160 C 580,180 660,260 660,330 C 640,390 580,420 520,450 C 460,490 410,470 380,440 C 340,430 280,410 270,360 C 230,300 170,180 220,130 Z"
+    },
+    "sources": [
+      {
+        "title": "The Mughal Empire",
+        "authorOrCitation": "Richards, John F. (1993), Cambridge University Press",
+        "type": "academic",
+        "note": "Standard academic reference on Mughal territorial consolidation, taxation, and provincial administration."
+      },
+      {
+        "title": "The Ain-i-Akbari",
+        "authorOrCitation": "Abu'l-Fazl (trans. H. Blochmann, 1873), Asiatic Society of Bengal",
+        "type": "primary",
+        "note": "Primary court gazetteer mapping the subahs (provinces), revenue districts, and frontier boundaries under Akbar."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "agra",
+        "targetType": "place",
+        "label": "Imperial capital on the Yamuna and site of the Taj Mahal"
+      },
+      {
+        "targetId": "shahjahanabad",
+        "targetType": "place",
+        "label": "New walled capital and site of the Red Fort"
+      },
+      {
+        "targetId": "taj-mahal",
+        "targetType": "exhibit",
+        "label": "View 3D model and architectural record of the Taj Mahal"
+      },
+      {
+        "targetId": "red-fort",
+        "targetType": "exhibit",
+        "label": "View 3D model of the Red Fort"
+      }
+    ],
+    "relatedExhibitIds": ["taj-mahal", "red-fort", "akbar-the-great", "mughal-paintings-architecture"]
+  },
+  {
+    "id": "modern-india-republic",
+    "name": "Republic of India & Modern Journey",
+    "nativeOrAlternateName": "Bharat Ganrajya",
+    "type": "republic",
+    "era": "modern-india",
+    "startYear": 1947,
+    "endYear": 2024,
+    "displayPeriod": "1947 – Present",
+    "capitalPlaceId": "new-delhi",
+    "colorTheme": "#31556b",
+    "shortDescription": "A sovereign constitutional democracy, navigating industrialization, digital infrastructure, and space exploration.",
+    "curatorNarrative": "Emerging from decades of nonviolent anti-colonial resistance symbolized by the 1930 Salt March, India established a democratic republic in 1950 anchored by a transformative constitution. Over seven decades, the nation evolved from rural agrarian resilience to global leadership in digital public infrastructure and pioneering space missions, culminating in Chandrayaan-3's lunar south polar touchdown.",
+    "certainty": "well-supported",
+    "certaintyNote": "Modern internationally recognized territorial boundaries and sovereign baseline.",
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["28 States and 8 Union Territories"],
+      "modernRelationshipNote": "The sovereign constitutional republic of India."
+    },
+    "mapCoordinates": {
+      "center": [440, 360],
+      "pathData": "M 320,130 C 370,120 430,130 460,170 C 510,190 570,230 640,250 C 690,260 750,290 730,330 C 680,350 630,340 600,380 C 560,450 540,550 490,640 C 465,660 450,640 440,580 C 430,520 400,480 370,440 C 330,440 290,410 300,360 C 320,310 290,240 320,130 Z"
+    },
+    "sources": [
+      {
+        "title": "India After Gandhi: The History of the World's Largest Democracy",
+        "authorOrCitation": "Guha, Ramachandra (2007), HarperCollins",
+        "type": "academic",
+        "note": "Comprehensive history of independent India's political, constitutional, and technological evolution."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "dandi",
+        "targetType": "place",
+        "label": "Site of the historic 1930 Salt March culminations"
+      },
+      {
+        "targetId": "sriharikota",
+        "targetType": "place",
+        "label": "ISRO spaceport and launch site for Chandrayaan-3"
+      },
+      {
+        "targetId": "chandrayaan-missions",
+        "targetType": "exhibit",
+        "label": "Explore Chandrayaan-3 Vikram lander 3D model"
+      }
+    ],
+    "relatedExhibitIds": ["chandrayaan-missions", "constitution-of-india", "dandi-march", "mahatma-gandhi"]
+  }
+]

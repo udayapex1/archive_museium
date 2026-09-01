@@ -1,0 +1,398 @@
+[
+  {
+    "id": "mohenjo-daro",
+    "historicalName": "Mohenjo-daro",
+    "historicalRole": "Urban Citadel & Great Bath",
+    "type": "capital",
+    "regionId": "indus-valley-civilization",
+    "yearActive": -2500,
+    "displayYear": "c. 2500 BCE",
+    "coordinates": {
+      "x": 275,
+      "y": 295,
+      "latitude": 27.32,
+      "longitude": 68.13
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "Pakistan",
+      "modernStatesOrProvinces": ["Sindh"],
+      "modernRelationshipNote": "Located on the right bank of the Indus River in modern Larkana District, Sindh, Pakistan.",
+      "modernEquivalentName": "Larkana District, Sindh, Pakistan"
+    },
+    "shortDescription": "One of the most extensively excavated metropolises of the ancient world, featuring a fortified citadel, multi-storey brick houses, covered drains, and the bitumen-sealed Great Bath.",
+    "sources": [
+      {
+        "title": "Mohenjo-daro and the Indus Civilization",
+        "authorOrCitation": "Marshall, Sir John (1931), Arthur Probsthain",
+        "type": "archaeological",
+        "note": "Initial comprehensive excavation reports detailing the Great Bath and street grid."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "indus-valley-civilization",
+        "targetType": "region",
+        "label": "Mature Harappan riverine urban center"
+      },
+      {
+        "targetId": "great-bath-mohenjo-daro",
+        "targetType": "exhibit",
+        "label": "Inspect the 3D model of the Great Bath"
+      }
+    ],
+    "relatedExhibitId": "great-bath-mohenjo-daro"
+  },
+  {
+    "id": "harappa",
+    "historicalName": "Harappa",
+    "historicalRole": "Northern River Hub & Granary",
+    "type": "urban-center",
+    "regionId": "indus-valley-civilization",
+    "yearActive": -2600,
+    "displayYear": "c. 2600 BCE",
+    "coordinates": {
+      "x": 325,
+      "y": 215,
+      "latitude": 30.63,
+      "longitude": 72.86
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "Pakistan",
+      "modernStatesOrProvinces": ["Punjab (PK)"],
+      "modernRelationshipNote": "Situated near an ancient course of the Ravi River in modern Sahiwal District, Punjab, Pakistan.",
+      "modernEquivalentName": "Sahiwal District, Punjab, Pakistan"
+    },
+    "shortDescription": "The first discovered settlement of the Indus civilization, characterized by massive circular working floors, brick workshops, and a large granary complex.",
+    "sources": [
+      {
+        "title": "Excavations at Harappa",
+        "authorOrCitation": "Vats, Madho Sarup (1940), Government of India Press",
+        "type": "archaeological"
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "indus-valley-civilization",
+        "targetType": "region",
+        "label": "Northern urban anchor of the civilization"
+      }
+    ]
+  },
+  {
+    "id": "lothal",
+    "historicalName": "Lothal",
+    "historicalRole": "Tidal Dockyard & Port of Trade",
+    "type": "port",
+    "regionId": "indus-valley-civilization",
+    "yearActive": -2400,
+    "displayYear": "c. 2400 BCE",
+    "coordinates": {
+      "x": 340,
+      "y": 430,
+      "latitude": 22.52,
+      "longitude": 72.24
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Gujarat"],
+      "modernRelationshipNote": "Situated near the Gulf of Khambhat in modern Ahmedabad District, Gujarat, India.",
+      "modernEquivalentName": "Ahmedabad District, Gujarat, India"
+    },
+    "shortDescription": "A premier maritime trading port equipped with a massive brick tidal basin (interpreted as a dockyard) and bead-making workshops exporting carnelian to Mesopotamia.",
+    "sources": [
+      {
+        "title": "Lothal and the Indus Civilization",
+        "authorOrCitation": "Rao, S.R. (1973), Asia Publishing House",
+        "type": "archaeological"
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "indus-valley-civilization",
+        "targetType": "region",
+        "label": "Southern maritime gateway"
+      }
+    ]
+  },
+  {
+    "id": "pataliputra",
+    "historicalName": "Pataliputra",
+    "historicalRole": "Imperial Capital (Mauryas & Guptas)",
+    "type": "capital",
+    "regionId": "mauryan-empire",
+    "yearActive": -300,
+    "displayYear": "c. 320 BCE – 500 CE",
+    "coordinates": {
+      "x": 585,
+      "y": 275,
+      "latitude": 25.61,
+      "longitude": 85.13
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Bihar"],
+      "modernRelationshipNote": "Occupies the riverfront confluence of the Ganga and Son rivers, directly under modern Patna, Bihar.",
+      "modernEquivalentName": "Patna, Bihar, India"
+    },
+    "shortDescription": "Described by Greek envoy Megasthenes as a grand timber-fortified metropolis spanning nine miles along the Ganga, serving successively as the supreme capital for the Mauryan and Gupta empires.",
+    "sources": [
+      {
+        "title": "Indika",
+        "authorOrCitation": "Megasthenes (fragments, trans. J.W. McCrindle, 1877)",
+        "type": "textual",
+        "note": "Eye-witness Hellenistic description of Pataliputra's moat, wooden palisades, and royal courts."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "mauryan-empire",
+        "targetType": "region",
+        "label": "Primary imperial capital"
+      },
+      {
+        "targetId": "gupta-empire",
+        "targetType": "region",
+        "label": "Dynastic ancestral capital"
+      }
+    ]
+  },
+  {
+    "id": "sarnath",
+    "historicalName": "Sarnath (Isipatana)",
+    "historicalRole": "Site of the Lion Capital & Ashoka Pillar",
+    "type": "monument",
+    "regionId": "mauryan-empire",
+    "yearActive": -250,
+    "displayYear": "c. 250 BCE",
+    "coordinates": {
+      "x": 545,
+      "y": 275,
+      "latitude": 25.38,
+      "longitude": 83.02
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Uttar Pradesh"],
+      "modernRelationshipNote": "Located roughly 10 kilometres north-east of Varanasi in eastern Uttar Pradesh, India.",
+      "modernEquivalentName": "Varanasi District, Uttar Pradesh, India"
+    },
+    "shortDescription": "The sacred deer park where the Buddha delivered his first discourse, and where Emperor Ashoka erected the polished Chunar sandstone pillar crowned with four back-to-back lions.",
+    "sources": [
+      {
+        "title": "Corpus Inscriptionum Indicarum: Inscriptions of Asoka",
+        "authorOrCitation": "Hultzsch, E. (1925), Archaeological Survey of India",
+        "type": "epigraphic"
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "ashoka-pillar",
+        "targetType": "exhibit",
+        "label": "View the Sarnath Lion Capital exhibit"
+      }
+    ],
+    "relatedExhibitId": "ashoka-pillar"
+  },
+  {
+    "id": "nalanda",
+    "historicalName": "Nalanda Mahavihara",
+    "historicalRole": "International Residential University",
+    "type": "learning-center",
+    "regionId": "gupta-empire",
+    "yearActive": 450,
+    "displayYear": "c. 450 – 1197 CE",
+    "coordinates": {
+      "x": 595,
+      "y": 285,
+      "latitude": 25.13,
+      "longitude": 85.44
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Bihar"],
+      "modernRelationshipNote": "Situated near modern Rajgir and Bihar Sharif in Nalanda District, Bihar, India.",
+      "modernEquivalentName": "Nalanda District, Bihar, India"
+    },
+    "shortDescription": "One of antiquity's greatest residential monasteries, housing up to ten thousand students and two thousand teachers studying philosophy, medicine, logic, and astronomy.",
+    "sources": [
+      {
+        "title": "Buddhist Records of the Western World",
+        "authorOrCitation": "Xuanzang (trans. Samuel Beal, 1884), Trübner & Co.",
+        "type": "primary",
+        "note": "Detailed seventh-century travelogue documenting curriculum, admission debates, and nine-storey libraries."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "gupta-empire",
+        "targetType": "region",
+        "label": "Founded under royal Gupta patronage"
+      },
+      {
+        "targetId": "nalanda-university",
+        "targetType": "exhibit",
+        "label": "Explore the Nalanda University exhibit"
+      }
+    ],
+    "relatedExhibitId": "nalanda-university"
+  },
+  {
+    "id": "agra",
+    "historicalName": "Akbarabad (Agra)",
+    "historicalRole": "Mughal River Capital & Site of the Taj Mahal",
+    "type": "capital",
+    "regionId": "mughal-empire",
+    "yearActive": 1632,
+    "displayYear": "1632 CE",
+    "coordinates": {
+      "x": 420,
+      "y": 260,
+      "latitude": 27.17,
+      "longitude": 78.04
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Uttar Pradesh"],
+      "modernRelationshipNote": "Situated on the banks of the Yamuna River in western Uttar Pradesh, India.",
+      "modernEquivalentName": "Agra, Uttar Pradesh, India"
+    },
+    "shortDescription": "The primary administrative and court capital of the high Mughal empire, transformed by riverfront garden-palaces culminating in the Taj Mahal commissioned by Shah Jahan in 1632.",
+    "sources": [
+      {
+        "title": "The Complete Taj Mahal and the Riverfront Gardens of Agra",
+        "authorOrCitation": "Koch, Ebba (2006), Thames & Hudson",
+        "type": "academic",
+        "note": "Authoritative architectural monograph on the Yamuna riverfront garden city and Taj Mahal complex."
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "mughal-empire",
+        "targetType": "region",
+        "label": "Primary riverfront court capital"
+      },
+      {
+        "targetId": "taj-mahal",
+        "targetType": "exhibit",
+        "label": "Explore the 3D model of the Taj Mahal"
+      }
+    ],
+    "relatedExhibitId": "taj-mahal"
+  },
+  {
+    "id": "shahjahanabad",
+    "historicalName": "Shahjahanabad (Old Delhi)",
+    "historicalRole": "Walled Imperial City & Red Fort",
+    "type": "capital",
+    "regionId": "mughal-empire",
+    "yearActive": 1639,
+    "displayYear": "1639 CE",
+    "coordinates": {
+      "x": 405,
+      "y": 225,
+      "latitude": 28.65,
+      "longitude": 77.24
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Delhi (NCT)"],
+      "modernRelationshipNote": "Directly comprises Old Delhi (including Chandni Chowk and the Red Fort) within the National Capital Territory of Delhi, India.",
+      "modernEquivalentName": "Old Delhi, NCT of Delhi, India"
+    },
+    "shortDescription": "The planned walled city founded by Shah Jahan in 1639, centered upon the colossal red sandstone palace-fortress (Lal Qila) and the central boulevard of Chandni Chowk.",
+    "sources": [
+      {
+        "title": "Shahjahanabad: The Sovereign City in Mughal India",
+        "authorOrCitation": "Blake, Stephen P. (1991), Cambridge University Press",
+        "type": "academic"
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "mughal-empire",
+        "targetType": "region",
+        "label": "Late imperial capital"
+      },
+      {
+        "targetId": "red-fort",
+        "targetType": "exhibit",
+        "label": "Explore the 3D model of the Red Fort"
+      }
+    ],
+    "relatedExhibitId": "red-fort"
+  },
+  {
+    "id": "dandi",
+    "historicalName": "Dandi",
+    "historicalRole": "Culmination of the 1930 Salt March",
+    "type": "monument",
+    "regionId": "modern-india-republic",
+    "yearActive": 1930,
+    "displayYear": "1930 CE",
+    "coordinates": {
+      "x": 335,
+      "y": 460,
+      "latitude": 20.88,
+      "longitude": 72.80
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Gujarat"],
+      "modernRelationshipNote": "A coastal village along the Arabian Sea in modern Navsari District, Gujarat, India.",
+      "modernEquivalentName": "Navsari District, Gujarat, India"
+    },
+    "shortDescription": "The coastal destination of the 390-kilometre trek from Sabarmati Ashram, where Mahatma Gandhi lifted natural salt on 6 April 1930, defying the British salt tax and launching the Civil Disobedience Movement.",
+    "sources": [
+      {
+        "title": "The Salt March: The Groundwork for Indian Independence",
+        "authorOrCitation": "Weber, Thomas (1997), Rupa & Co.",
+        "type": "academic"
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "dandi-march",
+        "targetType": "exhibit",
+        "label": "Read exhibit details on the Salt March"
+      }
+    ],
+    "relatedExhibitId": "dandi-march"
+  },
+  {
+    "id": "sriharikota",
+    "historicalName": "Satish Dhawan Space Centre (SHAR)",
+    "historicalRole": "ISRO Spaceport & Lunar Launch Site",
+    "type": "monument",
+    "regionId": "modern-india-republic",
+    "yearActive": 2023,
+    "displayYear": "2008 – 2023 CE",
+    "coordinates": {
+      "x": 485,
+      "y": 550,
+      "latitude": 13.72,
+      "longitude": 80.23
+    },
+    "modernGeography": {
+      "primaryPresentCountry": "India",
+      "modernStatesOrProvinces": ["Andhra Pradesh"],
+      "modernRelationshipNote": "A barrier island separating Pulicat Lake from the Bay of Bengal in Tirupati District, Andhra Pradesh, India.",
+      "modernEquivalentName": "Tirupati District, Andhra Pradesh, India"
+    },
+    "shortDescription": "India's spaceport on the Bay of Bengal from which the LVM3 rocket carrying Chandrayaan-3 launched on 14 July 2023, culminating in the historic Vikram landing at the lunar south pole.",
+    "sources": [
+      {
+        "title": "ISRO: A Personal History",
+        "authorOrCitation": "Aravamudan, R. & Gita Aravamudan (2017), HarperCollins",
+        "type": "academic"
+      }
+    ],
+    "connections": [
+      {
+        "targetId": "chandrayaan-missions",
+        "targetType": "exhibit",
+        "label": "Explore Chandrayaan-3 3D model and discoveries"
+      }
+    ],
+    "relatedExhibitId": "chandrayaan-missions"
+  }
+]

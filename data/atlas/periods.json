@@ -1,0 +1,167 @@
+[
+  {
+    "id": "period-indus",
+    "name": "Bronze Age & Harappan Urbanism",
+    "startYear": -2600,
+    "endYear": -1900,
+    "displayPeriod": "c. 2600 – 1900 BCE",
+    "era": "ancient-india",
+    "description": "The rise of planned urban centres across the Indus and Ghaggar-Hakra river basins, characterized by baked brick architecture, standardized metrology, and maritime trade with the Persian Gulf and Mesopotamia.",
+    "subcontinentHeadline": "Mature Harappan cities flourish with sophisticated civic engineering and long-distance trade.",
+    "globalContemporaries": [
+      {
+        "id": "gc-indus-egypt",
+        "region": "Africa",
+        "civilizationOrState": "Old Kingdom Egypt",
+        "title": "Age of the Pyramid Builders",
+        "description": "Pharaohs of the 4th to 6th Dynasties construct the Great Pyramids at Giza and establish centralised administration along the Nile."
+      },
+      {
+        "id": "gc-indus-mesopotamia",
+        "region": "Middle East",
+        "civilizationOrState": "Early Dynastic Sumer & Akkad",
+        "title": "Cuneiform Cities & Sargon's Empire",
+        "description": "Sumerian city-states (Ur, Uruk, Lagash) flourish before Sargon of Akkad unifies Mesopotamia in history's earliest recorded territorial empire, trading with 'Meluhha' (the Indus)."
+      },
+      {
+        "id": "gc-indus-stonehenge",
+        "region": "Europe",
+        "civilizationOrState": "Late Neolithic Britain",
+        "title": "Megalithic Architecture",
+        "description": "Construction of the iconic sarsen stone circles and astronomical avenues at Stonehenge."
+      }
+    ]
+  },
+  {
+    "id": "period-maurya",
+    "name": "Pan-Subcontinental Unification & Dhamma",
+    "startYear": -322,
+    "endYear": -185,
+    "displayPeriod": "c. 322 – 185 BCE",
+    "era": "ancient-india",
+    "description": "Founded by Chandragupta Maurya and guided by Chanakya, the Mauryan state united the greater part of the subcontinent. Under Ashoka, imperial statecraft transformed into an ethical mission inscribed across pillars and rocks.",
+    "subcontinentHeadline": "Imperial administration spans from the Hindu Kush to southern Karnataka, propagating Ashokan edicts in multiple scripts.",
+    "globalContemporaries": [
+      {
+        "id": "gc-maurya-ptolemaic",
+        "region": "Africa",
+        "civilizationOrState": "Ptolemaic Kingdom of Egypt",
+        "title": "The Library of Alexandria",
+        "description": "Hellenistic scholars in Alexandria compile world knowledge, calculate the Earth's circumference (Eratosthenes), and establish major trade along the Red Sea."
+      },
+      {
+        "id": "gc-maurya-rome",
+        "region": "Europe",
+        "civilizationOrState": "Roman Republic",
+        "title": "The Punic Wars",
+        "description": "Rome confronts Carthage in the Western Mediterranean, transitioning from an Italian regional power toward Mediterranean dominance."
+      },
+      {
+        "id": "gc-maurya-qin",
+        "region": "East Asia",
+        "civilizationOrState": "Qin & Early Han Dynasties",
+        "title": "Imperial Unification of China",
+        "description": "Qin Shi Huang unifies the Warring States in 221 BCE, standardizes Chinese script and weights, and begins connecting early Great Wall fortifications."
+      }
+    ]
+  },
+  {
+    "id": "period-gupta",
+    "name": "Classical Age & Residential Learning",
+    "startYear": 319,
+    "endYear": 550,
+    "displayPeriod": "c. 319 – 550 CE",
+    "era": "ancient-india",
+    "description": "A celebrated epoch of Sanskrit literature, mathematical breakthroughs (Aryabhata, the concept of zero), monumental rock-cut cave art (Ajanta), and the rise of Nalanda as an international residential university.",
+    "subcontinentHeadline": "Flourishing of Sanskrit scholasticism, monumental architecture, and cosmopolitan academic monasteries.",
+    "globalContemporaries": [
+      {
+        "id": "gc-gupta-rome",
+        "region": "Europe",
+        "civilizationOrState": "Western Roman Collapse & Byzantium",
+        "title": "Fall of Rome & Justinian's Code",
+        "description": "The Western Roman Empire disintegrates in 476 CE while Constantinople becomes the anchor of Byzantine legal codification and culture."
+      },
+      {
+        "id": "gc-gupta-sasanian",
+        "region": "Middle East",
+        "civilizationOrState": "Sasanian Empire of Persia",
+        "title": "Golden Age of Ctesiphon",
+        "description": "Shapur II and Khosrow I patronize Zoroastrian statehood, silk road commerce, and intellectual exchanges with Indian mathematicians and physicians."
+      },
+      {
+        "id": "gc-gupta-maya",
+        "region": "Americas",
+        "civilizationOrState": "Classic Maya Civilization",
+        "title": "Peak of Tikal & Calakmul",
+        "description": "Mesoamerican city-states build monumental stepped pyramids, develop sophisticated vigesimal mathematics with zero, and record detailed astronomical calendars."
+      }
+    ]
+  },
+  {
+    "id": "period-mughal",
+    "name": "Imperial Architecture & Cultural Synthesis",
+    "startYear": 1526,
+    "endYear": 1707,
+    "displayPeriod": "1526 – 1707 CE",
+    "era": "mughal-era",
+    "description": "A centralized empire renowned for administrative consolidation (mansabdari system), interfaith dialogue, manuscript illustration ateliers, and symmetrical white marble and red sandstone monuments.",
+    "subcontinentHeadline": "The construction of the Taj Mahal and Shahjahanabad represents the architectural apogee of seventeenth-century court culture.",
+    "globalContemporaries": [
+      {
+        "id": "gc-mughal-europe",
+        "region": "Europe",
+        "civilizationOrState": "Early Modern Europe",
+        "title": "The Thirty Years' War & Scientific Revolution",
+        "description": "Central Europe is engulfed by the Thirty Years' War (1618–1648), while Galileo Galilei publishes his landmark astronomical dialogue in 1632."
+      },
+      {
+        "id": "gc-mughal-china",
+        "region": "East Asia",
+        "civilizationOrState": "Ming to Qing Dynasty Transition",
+        "title": "Imperial Transition in China",
+        "description": "The late Ming dynasty experiences economic stress and peasant rebellions before the Manchu establish the Qing Dynasty in 1644."
+      },
+      {
+        "id": "gc-mughal-japan",
+        "region": "East Asia",
+        "civilizationOrState": "Tokugawa Shogunate",
+        "title": "The Pax Tokugawa & Sakoku",
+        "description": "Shogun Tokugawa Iemitsu establishes the closed-country edicts (Sakoku), ushering in over two centuries of internal peace and urban cultural growth."
+      },
+      {
+        "id": "gc-mughal-ottoman",
+        "region": "Middle East",
+        "civilizationOrState": "Ottoman Empire",
+        "title": "Sultanate under Murad IV",
+        "description": "The Ottomans recapture Baghdad in 1638 and expand palace architecture, governing a multi-confessional realm spanning three continents."
+      }
+    ]
+  },
+  {
+    "id": "period-modern",
+    "name": "Resistance, Republic & Scientific Frontiers",
+    "startYear": 1930,
+    "endYear": 2024,
+    "displayPeriod": "1930 – Present",
+    "era": "modern-india",
+    "description": "From mass civil disobedience on coastal salt marshes to constitutional democracy and planetary exploration, modern India combines heritage with technological self-reliance.",
+    "subcontinentHeadline": "The arc bends from colonial resistance (1930 Salt March) to constitutional governance (1950) and lunar polar landing (2023).",
+    "globalContemporaries": [
+      {
+        "id": "gc-modern-space",
+        "region": "Americas",
+        "civilizationOrState": "United States & Global Space Age",
+        "title": "Apollo, Artemis & Global Space Exploration",
+        "description": "Humanity lands on the Moon (1969) and later establishes international robotic lunar networks searching for polar water ice."
+      },
+      {
+        "id": "gc-modern-decolonization",
+        "region": "Africa",
+        "civilizationOrState": "Afro-Asian Decolonization",
+        "title": "The Post-War Decolonization Wave",
+        "description": "Nations across Asia and Africa achieve independence, forming the Non-Aligned Movement at Bandung (1955) and reshaping international diplomacy."
+      }
+    ]
+  }
+]
