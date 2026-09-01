@@ -20,6 +20,17 @@ export function AtlasView() {
   const [selectedPlace, setSelectedPlace] = useState<HistoricalPlace | null>(null);
   const [showModernBorders, setShowModernBorders] = useState<boolean>(false);
 
+  // Synchronize year from URL query parameter (e.g. /atlas?year=-2500)
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const yr = params.get('year');
+      if (yr && !isNaN(Number(yr))) {
+        setCurrentYear(Number(yr));
+      }
+    }
+  }, []);
+
   // Compute active period based on current year
   const activePeriod = useMemo(() => getPeriodForYear(currentYear), [currentYear]);
 
