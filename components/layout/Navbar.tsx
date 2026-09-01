@@ -10,7 +10,6 @@ export function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/walkthrough", label: "Walkthrough" },
     { href: "/atlas", label: "Atlas" },
     { href: "/timeline", label: "Timeline" },
     { href: "/search", label: "Search" },
@@ -63,7 +62,7 @@ export function Navbar() {
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center gap-3">
           <Link
-            href="/walkthrough"
+            href="/atlas"
             className="hidden items-center gap-2 rounded-full bg-[#f4cf75] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#1b120f] shadow-md transition-all hover:bg-white hover:shadow-lg hover:scale-105 active:scale-95 md:inline-flex"
           >
             <Compass className="h-4 w-4" />
@@ -102,7 +101,7 @@ export function Navbar() {
           <div className="mt-2 pt-2 border-t border-white/10">
             <Link
               onClick={() => setOpen(false)}
-              href="/walkthrough"
+              href="/atlas"
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#f4cf75] py-3 text-xs font-bold uppercase tracking-wider text-[#1b120f]"
             >
               <Compass className="h-4 w-4" />

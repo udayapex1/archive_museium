@@ -16,10 +16,10 @@ export function Footer() {
             Carry the story with you.
           </h2>
           <Link
-            href="/walkthrough"
+            href="/timeline"
             className="mt-5 inline-flex w-fit rounded-full bg-[#f4cf75] px-5 py-3 text-xs font-bold text-[#2f211b] transition hover:bg-white"
           >
-            Walk through the museum →
+            Explore the historical timeline →
           </Link>
         </div>
         <div className="relative hidden min-h-[176px] md:block">
@@ -56,9 +56,6 @@ export function Footer() {
             <div className="mt-5 grid gap-3 text-sm text-white/70">
               <Link href="/" className="hover:text-white">
                 Home
-              </Link>
-              <Link href="/walkthrough" className="hover:text-white">
-                Walkthrough
               </Link>
               <Link href="/atlas" className="hover:text-white">
                 Atlas
