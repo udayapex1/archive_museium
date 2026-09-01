@@ -1,37 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
-
-const footerImage =
-  "https://res.cloudinary.com/dwemivxbp/image/upload/v1788029765/pexels-uwc12-574313_lvhce9.jpg";
 
 export function Footer() {
   return (
-    <footer className="relative mt-24 w-full bg-[#111010] px-5 pb-6 pt-28 text-white md:px-10">
-      <div className="pointer-events-none absolute inset-x-0 -top-16 mx-auto h-44 max-w-6xl overflow-hidden rounded-2xl bg-[#171313] shadow-2xl md:grid md:grid-cols-[1.1fr_.9fr]">
-        <div className="pointer-events-auto flex flex-col justify-center px-7 py-7 md:px-10">
-          <p className="text-xs font-bold uppercase tracking-[.22em] text-[#f4cf75]">
-            Continue your visit
-          </p>
-          <h2 className="mt-3 max-w-md font-display text-3xl font-bold leading-tight text-white md:text-4xl">
-            Carry the story with you.
-          </h2>
-          <Link
-            href="/timeline"
-            className="mt-5 inline-flex w-fit rounded-full bg-[#f4cf75] px-5 py-3 text-xs font-bold text-[#2f211b] transition hover:bg-white"
-          >
-            Explore the historical timeline →
-          </Link>
-        </div>
-        <div className="relative hidden min-h-[176px] md:block">
-          <Image
-            src={footerImage}
-            alt="Indian heritage architecture"
-            fill
-            className="object-cover opacity-75"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#171313] via-transparent to-transparent" />
-        </div>
-      </div>
+    <footer className="relative mt-24 w-full bg-[#111010] px-5 py-14 text-white md:px-10">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
