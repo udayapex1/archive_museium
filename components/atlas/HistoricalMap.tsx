@@ -453,15 +453,44 @@ export function HistoricalMap({
               <path key={`clip-sa-${country.properties.name}`} d={geometryPath(country.geometry)} />
             ))}
           </clipPath>
+
+          {/* Desert Stipple Texture (Classical cartographic sand dune stipples in Thar & arid basins) */}
+          <pattern id="desert-stipple" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="2.5" cy="2.5" r="0.75" fill="#846d53" opacity="0.45" />
+            <circle cx="7.5" cy="4.5" r="0.65" fill="#846d53" opacity="0.35" />
+            <circle cx="4.0" cy="8.0" r="0.55" fill="#846d53" opacity="0.40" />
+            <circle cx="8.5" cy="8.5" r="0.50" fill="#846d53" opacity="0.30" />
+          </pattern>
+
+          {/* Tactile Antique Parchment Paper Grain Filter */}
+          <filter id="parchment-grain" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0.35   0 0 0 0 0.28   0 0 0 0 0.18   0 0 0 0.045 0"
+              result="coloredNoise"
+            />
+            <feComposite in="SourceGraphic" in2="coloredNoise" operator="over" />
+          </filter>
         </defs>
 
         {/* 1. WATER LAYER: Unmistakable archival dusty blue-grey ocean */}
         <rect width="1000" height="700" fill="#809ea9" />
 
-        {/* Subtle Bathymetric Coastal Wave Lines */}
+        {/* Coastal Bathymetric Waves & Classical Engraved Shoreline Hachures */}
         <g fill="none" stroke="#6e8d98" strokeWidth="2.2" opacity="0.40" pointerEvents="none">
           {countries.map((country) => (
             <path key={`wave-1-${country.properties.name}`} d={geometryPath(country.geometry)} />
+          ))}
+        </g>
+        <g fill="none" stroke="#668794" strokeWidth="1.2" strokeDasharray="3 4" opacity="0.45" pointerEvents="none">
+          {countries.map((country) => (
+            <path key={`wave-dash-1-${country.properties.name}`} d={geometryPath(country.geometry)} />
+          ))}
+        </g>
+        <g fill="none" stroke="#5d7f8d" strokeWidth="0.9" strokeDasharray="1.5 5" opacity="0.35" pointerEvents="none">
+          {countries.map((country) => (
+            <path key={`wave-dash-2-${country.properties.name}`} d={geometryPath(country.geometry)} />
           ))}
         </g>
         <g fill="none" stroke="#6e8d98" strokeWidth="5.5" opacity="0.22" pointerEvents="none">
@@ -481,6 +510,34 @@ export function HistoricalMap({
                 .join(' ')}
             />
           ))}
+        </g>
+
+        {/* Desert Stipple Texture Overlays in Arid Zones */}
+        <g pointerEvents="none">
+          {/* Thar Desert Stipple */}
+          <ellipse
+            cx={project([71.5, 27.0])[0]}
+            cy={project([71.5, 27.0])[1]}
+            rx="48"
+            ry="36"
+            fill="url(#desert-stipple)"
+          />
+          {/* Balochistan / Makran Arid Stipple */}
+          <ellipse
+            cx={project([64.5, 28.5])[0]}
+            cy={project([64.5, 28.5])[1]}
+            rx="42"
+            ry="26"
+            fill="url(#desert-stipple)"
+          />
+          {/* Iranian Plateau / Dasht-e Kavir Stipple */}
+          <ellipse
+            cx={project([56.0, 32.5])[0]}
+            cy={project([56.0, 32.5])[1]}
+            rx="45"
+            ry="25"
+            fill="url(#desert-stipple)"
+          />
         </g>
 
         {/* 3. HIGH-RESOLUTION SOUTH ASIA LANDMASS (Warm antique parchment tone) */}
@@ -874,6 +931,17 @@ export function HistoricalMap({
             );
           })}
         </g>
+
+        {/* 15. Tactile Antique Laid Paper Grain Filter Layer */}
+        <rect
+          width="1000"
+          height="700"
+          filter="url(#parchment-grain)"
+          fill="#f6efe4"
+          opacity="0.20"
+          pointerEvents="none"
+          style={{ mixBlendMode: 'multiply' }}
+        />
       </svg>
 
       {/* Floating Navigation Controls */}
