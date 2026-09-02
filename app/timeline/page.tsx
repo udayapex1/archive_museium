@@ -1,2 +1,10 @@
-import Link from 'next/link'; import {ArrowUpRight} from 'lucide-react'; import galleries from '@/data/galleries.json'; import {exhibits,yearValue} from '@/lib/getExhibits'; import Image from 'next/image'; import {Reveal} from '@/components/ui/Motion'
-export default function Timeline(){const items=[...exhibits].sort((a,b)=>yearValue(a.timelineYear)-yearValue(b.timelineYear));return <Reveal><div className="mx-auto max-w-6xl px-5 pt-28 pb-20"><p className="eyebrow">A chronology</p><h1 className="mt-3 text-6xl font-bold">The long view.</h1><p className="mt-6 max-w-xl text-lg leading-8 text-[#766459]">From planned Bronze Age cities to lunar landings, a constellation of moments across Indian history.</p><div className="mt-16 space-y-0 border-l-2 border-[#ddcdbb] pl-7 md:pl-12">{items.map((e,i)=>{const g=galleries.find(x=>x.id===e.gallery)!;return <div key={e.id} className="relative pb-12"><span className="absolute -left-[37px] top-1 h-4 w-4 rounded-full border-4 border-parchment" style={{backgroundColor:g.colorTheme}}/><p className="text-sm font-bold" style={{color:g.colorTheme}}>{e.timelineYear}</p><Link href={`/exhibits/${e.id}`} className="group mt-3 flex max-w-2xl items-center gap-5 rounded-2xl border border-[#e5d9ca] bg-white p-3 shadow-sm transition hover:-translate-y-1 hover:shadow-museum"><Image src={e.image} width={130} height={90} alt="" className="h-20 w-28 rounded-xl object-cover"/><div className="flex-1"><p className="text-xs font-bold uppercase tracking-wider text-[#998577]">{g.name}</p><h2 className="mt-1 text-xl font-bold group-hover:text-maroon">{e.title}</h2></div><ArrowUpRight className="mr-3 text-[#a16a4d]" size={18}/></Link></div>})}</div></div></Reveal>}
+import { TimelineView } from '@/components/timeline/TimelineView';
+
+export const metadata = {
+  title: 'Historical Timeline | The Archive Digital Museum',
+  description: 'A curated chronological passage through five millennia of Indian civilization, imperial frontiers, and transformative turning points.',
+};
+
+export default function TimelinePage() {
+  return <TimelineView />;
+}

@@ -1,1 +1,6 @@
-[{"id":"ancient-india","name":"Ancient India","description":"Civilizations, learning and stone-carved ideas that shaped the subcontinent.","thumbnail":"/images/ancient.svg","colorTheme":"#b45c3c"},{"id":"mughal-era","name":"Mughal Era","description":"Monuments, ateliers and an imperial culture of extraordinary detail.","thumbnail":"/images/mughal.svg","colorTheme":"#526353"},{"id":"modern-india","name":"Modern India","description":"Constitutional ideals, scientific ambition and a connected future.","thumbnail":"/images/modern.svg","colorTheme":"#31556b"}]
+[
+  {"id":"ancient-india","name":"Ancient India","description":"Civilizations, learning and stone-carved ideas that shaped the subcontinent.","thumbnail":"/images/ancient.svg","colorTheme":"#b45c3c"},
+  {"id":"mughal-era","name":"Mughal Era","description":"Monuments, ateliers and an imperial culture of extraordinary detail.","thumbnail":"/images/mughal.svg","colorTheme":"#526353"},
+  {"id":"freedom-struggle","name":"Freedom Struggle","description":"Mass movements, nonviolent satyagraha, and revolutionary sacrifice for independence.","thumbnail":"/images/dandi-march.jpg","colorTheme":"#4a5d4e"},
+  {"id":"modern-india","name":"Modern India","description":"Constitutional ideals, scientific ambition and a connected future.","thumbnail":"/images/modern.svg","colorTheme":"#31556b"}
+]
