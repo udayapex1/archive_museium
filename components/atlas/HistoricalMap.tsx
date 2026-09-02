@@ -23,8 +23,6 @@ type Geometry = { type: string; coordinates: unknown };
 type GeoFeature = { properties: { layer: 'country' | 'river'; name: string; iso?: string }; geometry: Geometry };
 
 // Equirectangular projection centered on the Indian subcontinent (~79°E, 21°N)
-// Scaled so the Indian subcontinent is the central focal area, while surrounding Afro-Eurasian
-// world landmass (Arabia, Iran, Central Asia, China, Southeast Asia) is contiguous and explorable.
 const center = { lon: 79, lat: 21 };
 const mapScale = 16.0;
 const project = ([longitude, latitude]: Position): Position => [
@@ -52,147 +50,150 @@ const ringPath = (ring: Position[]) => `${linePath(ring)} Z`;
 // Geographically accurate historical territorial frontiers spanning their genuine cross-border horizons
 const historicalGeometry: Record<string, { ring: Position[]; label: Position; coreCenter: Position; heartland: string }> = {
   'indus-valley-civilization': {
-    // Spans Makran, Balochistan, Sindh, Pakistani Punjab, Indian Punjab, Haryana, Rajasthan, Gujarat
     coreCenter: [69.5, 28.0],
     label: [70.2, 28.2],
     heartland: 'INDUS, GHAGGAR & GUJARAT REALM',
     ring: [
-      [61.0, 25.0], // Makran coast (Sutkagan Dor)
-      [61.8, 27.5], // Balochistan
-      [64.5, 30.5], // Quetta / Bolan pass corridor
-      [68.5, 33.2], // Khyber / Potohar corridor
-      [72.5, 34.0], // Swat & Taxila foothills
-      [75.0, 32.5], // Punjab (Beas / Sutlej)
-      [77.5, 30.5], // Haryana / Rakhigarhi
-      [77.8, 28.5], // Upper Yamuna (Alamgirpur)
-      [75.5, 26.0], // Rajasthan Aravallis (Kalibangan)
-      [73.5, 23.5], // North Gujarat
-      [72.5, 21.2], // Gulf of Khambhat / Lothal
-      [69.2, 21.8], // Saurashtra peninsula
-      [68.0, 23.5], // Rann of Kutch
-      [66.5, 24.8], // Indus delta
+      [61.0, 25.0],
+      [61.8, 27.5],
+      [64.5, 30.5],
+      [68.5, 33.2],
+      [72.5, 34.0],
+      [75.0, 32.5],
+      [77.5, 30.5],
+      [77.8, 28.5],
+      [75.5, 26.0],
+      [73.5, 23.5],
+      [72.5, 21.2],
+      [69.2, 21.8],
+      [68.0, 23.5],
+      [66.5, 24.8],
       [62.5, 25.0],
-      [61.0, 25.0]
+      [61.0, 25.0],
     ],
   },
   'mauryan-empire': {
-    // Spans Afghanistan (Herat, Kandahar, Kabul), all of Pakistan, north/central/east India, Bangladesh, to Karnataka
     coreCenter: [82.5, 25.0],
     label: [79.5, 24.2],
     heartland: 'PAN-SUBCONTINENTAL EMPIRE',
     ring: [
-      [61.5, 34.5], // Herat / Arachosia
-      [65.5, 36.8], // Hindu Kush
-      [71.0, 36.2], // Kabul / Gandhara
-      [74.8, 35.0], // Kashmir
-      [80.0, 31.8], // Himalayan foothills
-      [86.0, 28.8], // Nepal Terai
-      [92.5, 26.5], // Assam border
-      [92.8, 22.8], // Chittagong / Bengal
-      [89.5, 21.5], // Sundarbans delta
-      [86.0, 19.5], // Kalinga / Odisha coast
-      [80.5, 14.5], // Andhra coast
-      [77.5, 13.0], // Karnataka (Brahmagiri / Siddapura edicts)
-      [75.0, 13.5], // Western Karnataka
-      [73.5, 16.0], // Maharashtra coast
-      [72.5, 19.5], // Konkan
-      [70.0, 21.5], // Saurashtra (Girnar edicts)
-      [67.0, 24.5], // Indus mouth
-      [62.0, 25.5], // Gedrosia / Makran
-      [61.0, 30.5], // Seistan
-      [61.5, 34.5]
+      [61.5, 34.5],
+      [65.5, 36.8],
+      [71.0, 36.2],
+      [74.8, 35.0],
+      [80.0, 31.8],
+      [86.0, 28.8],
+      [92.5, 26.5],
+      [92.8, 22.8],
+      [89.5, 21.5],
+      [86.0, 19.5],
+      [80.5, 14.5],
+      [77.5, 13.0],
+      [75.0, 13.5],
+      [73.5, 16.0],
+      [72.5, 19.5],
+      [70.0, 21.5],
+      [67.0, 24.5],
+      [62.0, 25.5],
+      [61.0, 30.5],
+      [61.5, 34.5],
     ],
   },
   'gupta-empire': {
-    // Core Gangetic valley, Malwa, Bengal, Punjab up to Jhelum, Saurashtra
     coreCenter: [81.5, 25.5],
     label: [81.2, 25.6],
     heartland: 'GANGETIC PLAIN & MALWA',
     ring: [
-      [71.5, 30.5], // Punjab / Multan border
-      [74.5, 32.5], // Shivalik foothills
-      [78.5, 31.0], // Garhwal
-      [84.5, 28.5], // Nepal Terai
-      [89.5, 27.0], // Bengal / Kamarupa frontier
-      [91.8, 24.5], // Samatata (Eastern Bengal)
-      [90.0, 22.0], // Bengal delta
-      [86.5, 21.0], // Odisha border
-      [82.0, 21.5], // Chhattisgarh
-      [77.5, 21.0], // Narmada / Vakataka frontier
-      [73.5, 21.5], // Gujarat
-      [70.0, 22.0], // Saurashtra
-      [70.5, 25.0], // Rajasthan
-      [71.5, 28.0], // Thar margin
-      [71.5, 30.5]
+      [71.5, 30.5],
+      [74.5, 32.5],
+      [78.5, 31.0],
+      [84.5, 28.5],
+      [89.5, 27.0],
+      [91.8, 24.5],
+      [90.0, 22.0],
+      [86.5, 21.0],
+      [82.0, 21.5],
+      [77.5, 21.0],
+      [73.5, 21.5],
+      [70.0, 22.0],
+      [70.5, 25.0],
+      [71.5, 28.0],
+      [71.5, 30.5],
     ],
   },
   'mughal-empire': {
-    // Kabul, Kandahar, all of Pakistan, northern India, Bengal, Gujarat, and Deccan subahs
     coreCenter: [76.5, 27.5],
     label: [77.2, 26.8],
     heartland: 'IMPERIAL HINDUSTAN & DECCAN SUBAHS',
     ring: [
-      [64.5, 33.5], // Kandahar
-      [68.5, 35.5], // Kabul / Hindu Kush
-      [74.0, 35.0], // Kashmir
-      [78.0, 32.5], // Himalayan frontier
-      [84.0, 29.0], // Awadh / Nepal border
-      [90.0, 27.0], // Bengal / Assam frontier
-      [93.0, 24.0], // Sylhet / Chittagong
-      [90.5, 21.8], // Bengal delta
-      [87.0, 20.5], // Odisha coast
-      [81.5, 18.0], // Deccan / Godavari
-      [76.0, 18.0], // Aurangabad
-      [73.5, 19.5], // Konkan
-      [70.5, 21.5], // Gujarat
-      [67.5, 24.0], // Sindh / Indus delta
-      [64.0, 26.0], // Balochistan
-      [62.5, 30.0], // Seistan
-      [64.5, 33.5]
+      [64.5, 33.5],
+      [68.5, 35.5],
+      [74.0, 35.0],
+      [78.0, 32.5],
+      [84.0, 29.0],
+      [90.0, 27.0],
+      [93.0, 24.0],
+      [90.5, 21.8],
+      [87.0, 20.5],
+      [81.5, 18.0],
+      [76.0, 18.0],
+      [73.5, 19.5],
+      [70.5, 21.5],
+      [67.5, 24.0],
+      [64.0, 26.0],
+      [62.5, 30.0],
+      [64.5, 33.5],
     ],
   },
   'british-era': {
-    // British Indian Empire (British Raj provinces & Princely States across India, Pakistan, Bangladesh, and Burma)
     coreCenter: [79.0, 22.0],
     label: [79.2, 22.5],
     heartland: 'BRITISH RAJ & PRINCELY STATES',
     ring: [
-      [61.5, 25.0], // Balochistan / Iran frontier
-      [62.5, 29.5], // Seistan
-      [66.5, 32.5], // Durand Line (Chaman)
-      [69.5, 34.5], // Khyber Pass
-      [73.5, 36.5], // Gilgit / Karakoram
-      [78.0, 35.5], // Ladakh
-      [81.0, 31.0], // Tibet frontier
-      [88.5, 28.0], // Sikkim
-      [92.5, 27.5], // Arunachal
-      [97.0, 27.0], // Upper Burma / Yunnan frontier
-      [98.5, 21.0], // Shan States
-      [98.0, 15.0], // Tenasserim coast
-      [94.5, 16.0], // Irrawaddy delta
-      [92.5, 21.0], // Arakan
-      [89.0, 21.5], // Sundarbans
-      [85.0, 19.0], // Odisha coast
-      [80.0, 13.5], // Madras presidency coast
-      [79.2, 9.2],  // Palk Strait
-      [77.5, 8.1],  // Cape Comorin
-      [75.5, 12.5], // Malabar coast
-      [73.0, 18.5], // Bombay presidency coast
-      [70.0, 21.0], // Kathiawar
-      [68.0, 23.5], // Rann of Kutch
-      [67.0, 24.5], // Karachi / Indus delta
-      [61.5, 25.0]
+      [61.5, 25.0],
+      [62.5, 29.5],
+      [66.5, 32.5],
+      [69.5, 34.5],
+      [73.5, 36.5],
+      [78.0, 35.5],
+      [81.0, 31.0],
+      [88.5, 28.0],
+      [92.5, 27.5],
+      [97.0, 27.0],
+      [98.5, 21.0],
+      [98.0, 15.0],
+      [94.5, 16.0],
+      [92.5, 21.0],
+      [89.0, 21.5],
+      [85.0, 19.0],
+      [80.0, 13.5],
+      [79.2, 9.2],
+      [77.5, 8.1],
+      [75.5, 12.5],
+      [73.0, 18.5],
+      [70.0, 21.0],
+      [68.0, 23.5],
+      [67.0, 24.5],
+      [61.5, 25.0],
     ],
   },
   'modern-india-republic': {
     coreCenter: [78.5, 22.0],
     label: [78.8, 21.5],
     heartland: 'SOVEREIGN CONSTITUTIONAL REPUBLIC',
-    ring: [], // Exact sovereign geometry from Natural Earth
+    ring: [],
   },
 };
 
-// Surrounding Continents & Broad Geographic Realms (always present on world landmass)
+// Precompute static rings for historical entities
+const precomputedTerritoryPaths: Record<string, string> = {};
+for (const [id, def] of Object.entries(historicalGeometry)) {
+  if (def.ring && def.ring.length > 0) {
+    precomputedTerritoryPaths[id] = ringPath(def.ring);
+  }
+}
+
+// Surrounding Continents & Broad Geographic Realms
 const continentAndRealmLabels: Array<[string, Position, number?]> = [
   ['A S I A', [88.0, 42.0], 0],
   ['C E N T R A L   A S I A', [66.5, 40.5], 0],
@@ -204,7 +205,12 @@ const continentAndRealmLabels: Array<[string, Position, number?]> = [
   ['S O U T H E A S T   A S I A', [101.5, 16.5], 0],
 ];
 
-// Major Seas, Gulfs, Straits and Oceans (antique italic cartography)
+const continentAndRealmRenderData = continentAndRealmLabels.map(([label, coord, rot]) => {
+  const [x, y] = project(coord);
+  return { label, x, y, rot: rot ?? 0 };
+});
+
+// Major Seas, Gulfs, Straits and Oceans
 const seaLabels: Array<[string, Position, number?]> = [
   ['A R A B I A N   S E A', [63.5, 17.5], -74],
   ['B A Y   O F   B E N G A L', [91.0, 15.5], 70],
@@ -220,6 +226,12 @@ const seaLabels: Array<[string, Position, number?]> = [
   ['PALK STRAIT', [79.8, 9.6], 0],
 ];
 
+const seaRenderData = seaLabels.map(([label, coord, rot]) => {
+  const [x, y] = project(coord);
+  const isMajorOcean = label.includes('OCEAN') || label.includes('SEA') || label.includes('BAY');
+  return { label, x, y, rot: rot ?? 0, isMajorOcean };
+});
+
 // Physical geographic mountain & plateau landmarks
 const physicalLandLabels: Array<[string, Position, number?]> = [
   ['HINDU KUSH', [69.0, 36.5], -18],
@@ -230,7 +242,12 @@ const physicalLandLabels: Array<[string, Position, number?]> = [
   ['EASTERN GHATS', [82.5, 16.5], 55],
 ];
 
-// Contextual Historical Regions (Shown ONLY when Modern Borders is OFF)
+const physicalLandRenderData = physicalLandLabels.map(([label, coord, rot]) => {
+  const [x, y] = project(coord);
+  return { label, x, y, rot: rot ?? 0 };
+});
+
+// Contextual Historical Regions
 const eraHistoricalRegions: Record<string, Array<[string, Position]>> = {
   'ancient-india': [
     ['MAGADHA', [85.2, 25.0]],
@@ -257,7 +274,15 @@ const eraHistoricalRegions: Record<string, Array<[string, Position]>> = {
   ],
 };
 
-// Modern Country Reference Labels (ONLY shown when Modern Borders toggle is ON)
+const eraHistoricalRenderData: Record<string, Array<{ name: string; x: number; y: number }>> = {};
+for (const [eraKey, items] of Object.entries(eraHistoricalRegions)) {
+  eraHistoricalRenderData[eraKey] = items.map(([name, coord]) => {
+    const [x, y] = project(coord);
+    return { name, x, y };
+  });
+}
+
+// Modern Country Reference Labels
 const modernCountryReferenceLabels: Array<[string, Position]> = [
   ['AFGHANISTAN', [66.2, 33.8]],
   ['PAKISTAN', [69.2, 29.8]],
@@ -271,9 +296,13 @@ const modernCountryReferenceLabels: Array<[string, Position]> = [
   ['IRAN', [59.5, 32.0]],
 ];
 
-// Modern States & Provinces (ONLY shown when Modern Borders toggle is ON AND Zoomed in >= 1.25)
+const modernCountryRenderData = modernCountryReferenceLabels.map(([label, coord]) => {
+  const [x, y] = project(coord);
+  return { label, x, y };
+});
+
+// Modern States & Provinces
 const modernStateAndProvinceLabels: Array<[string, Position]> = [
-  // India
   ['Punjab', [75.3, 31.0]],
   ['Haryana', [76.3, 29.2]],
   ['Rajasthan', [73.5, 26.5]],
@@ -292,20 +321,22 @@ const modernStateAndProvinceLabels: Array<[string, Position]> = [
   ['Assam', [92.8, 26.2]],
   ['Jammu & Kashmir', [75.0, 33.8]],
   ['Ladakh', [77.8, 34.5]],
-  // Pakistan
   ['Sindh', [68.8, 26.0]],
   ['Punjab (PK)', [72.5, 30.5]],
   ['Balochistan', [65.0, 28.5]],
   ['Khyber Pakhtunkhwa', [71.5, 34.5]],
-  // Afghanistan
   ['Kabul', [69.2, 34.6]],
   ['Kandahar', [65.7, 31.6]],
   ['Herat', [62.2, 34.3]],
-  // Bangladesh / Nepal / Sri Lanka
   ['Dhaka Region', [90.4, 23.8]],
   ['Kathmandu Valley', [85.3, 27.7]],
   ['Central Province (SL)', [80.7, 7.2]],
 ];
+
+const modernStateRenderData = modernStateAndProvinceLabels.map(([name, coord]) => {
+  const [x, y] = project(coord);
+  return { name, x, y };
+});
 
 // Historical place priority hierarchy
 const placeHierarchy = (place: HistoricalPlace): { level: 1 | 2 | 3; categoryLabel: string } => {
@@ -335,13 +366,25 @@ export function HistoricalMap({
 
   const dragStart = useRef({ x: 0, y: 0 });
   const panStart = useRef({ x: 0, y: 0 });
+  const targetPan = useRef({ x: 0, y: 0 });
+  const rafRef = useRef<number | null>(null);
 
-  // World landmass polygons from Natural Earth 1:110m (covers whole globe, eliminates empty voids)
+  const wheelRafRef = useRef<number | null>(null);
+  const targetScale = useRef(1);
+
+  // World landmass polygons from Natural Earth 1:110m
   const worldFeatures = (geographyWorld.features as unknown) as Array<{
     geometry: { type: string; coordinates: Position[][] };
   }>;
 
-  // High-resolution South Asia features (rivers & countries)
+  // Memoize world paths once (eliminates continuous stringification during drags)
+  const worldPaths = useMemo(() => {
+    return worldFeatures.map((feature) =>
+      feature.geometry.coordinates.map((ring) => linePath(ring) + ' Z').join(' ')
+    );
+  }, [worldFeatures]);
+
+  // High-resolution South Asia features
   const southAsiaFeatures = geographySouthAsia.features as GeoFeature[];
   const countries = useMemo(
     () => southAsiaFeatures.filter((feature) => feature.properties.layer === 'country'),
@@ -351,10 +394,51 @@ export function HistoricalMap({
     () => southAsiaFeatures.filter((feature) => feature.properties.layer === 'river'),
     [southAsiaFeatures]
   );
-  const indiaCountry = useMemo(
-    () => countries.find((c) => c.properties.name === 'India'),
-    [countries]
-  );
+
+  // Memoize country paths once
+  const countryPathList = useMemo(() => {
+    return countries.map((country) => ({
+      name: country.properties.name,
+      d: geometryPath(country.geometry),
+    }));
+  }, [countries]);
+
+  // Combined country path for coastal bathymetric waves and clipPath
+  const combinedCountryPath = useMemo(() => {
+    return countryPathList.map((c) => c.d).join(' ');
+  }, [countryPathList]);
+
+  // India geometry path for Modern Republic
+  const indiaD = useMemo(() => {
+    const ind = countries.find((c) => c.properties.name === 'India');
+    return ind ? geometryPath(ind.geometry) : '';
+  }, [countries]);
+
+  // Memoize river paths and label coordinates
+  const riverRenderData = useMemo(() => {
+    return rivers.map((river) => {
+      const isMajorArtery =
+        river.properties.name === 'Ganges' ||
+        river.properties.name === 'Indus' ||
+        river.properties.name === 'Brahmaputra';
+
+      const lines: Position[][] =
+        river.geometry.type === 'LineString'
+          ? [river.geometry.coordinates as Position[]]
+          : (river.geometry.coordinates as Position[][]);
+      const midpoint = (lines[0] ?? [[0, 0] as Position])[Math.floor((lines[0]?.length ?? 1) / 2)] as Position;
+      const [labelX, labelY] = project(midpoint);
+
+      return {
+        key: `${river.properties.name}-${midpoint.join(',')}`,
+        name: river.properties.name,
+        d: riverPath(river.geometry),
+        isMajorArtery,
+        labelX,
+        labelY,
+      };
+    });
+  }, [rivers]);
 
   // Zoom-dependent Level of Detail (LoD)
   const showRegionalDetail = scale >= 1.22;
@@ -363,18 +447,31 @@ export function HistoricalMap({
   const setZoom = (factor: number) =>
     setScale((value) => Math.max(0.80, Math.min(4.0, value * factor)));
 
-  const handleWheel = useCallback(
-    (event: WheelEvent) => {
-      event.preventDefault();
-      setZoom(event.deltaY < 0 ? 1.14 : 0.88);
-    },
-    []
-  );
+  useEffect(() => {
+    targetScale.current = scale;
+  }, [scale]);
+
+  const handleWheel = useCallback((event: WheelEvent) => {
+    event.preventDefault();
+    const factor = event.deltaY < 0 ? 1.14 : 0.88;
+    targetScale.current = Math.max(0.80, Math.min(4.0, targetScale.current * factor));
+    if (wheelRafRef.current === null) {
+      wheelRafRef.current = requestAnimationFrame(() => {
+        setScale(targetScale.current);
+        wheelRafRef.current = null;
+      });
+    }
+  }, []);
 
   useEffect(() => {
     const element = containerRef.current;
     element?.addEventListener('wheel', handleWheel, { passive: false });
-    return () => element?.removeEventListener('wheel', handleWheel);
+    return () => {
+      element?.removeEventListener('wheel', handleWheel);
+      if (wheelRafRef.current !== null) {
+        cancelAnimationFrame(wheelRafRef.current);
+      }
+    };
   }, [handleWheel]);
 
   const onPointerDown = (event: React.PointerEvent) => {
@@ -382,23 +479,37 @@ export function HistoricalMap({
     setDragging(true);
     dragStart.current = { x: event.clientX, y: event.clientY };
     panStart.current = pan;
+    targetPan.current = pan;
     (event.target as HTMLElement).setPointerCapture?.(event.pointerId);
   };
 
   const onPointerMove = (event: React.PointerEvent) => {
     if (!dragging) return;
-    setPan({
+    targetPan.current = {
       x: Math.max(-750, Math.min(750, panStart.current.x + event.clientX - dragStart.current.x)),
       y: Math.max(-550, Math.min(550, panStart.current.y + event.clientY - dragStart.current.y)),
-    });
+    };
+    if (rafRef.current === null) {
+      rafRef.current = requestAnimationFrame(() => {
+        setPan(targetPan.current);
+        rafRef.current = null;
+      });
+    }
   };
 
   const onPointerUp = (event: React.PointerEvent) => {
+    if (rafRef.current !== null) {
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+    }
+    setPan(targetPan.current);
     setDragging(false);
     (event.target as HTMLElement).releasePointerCapture?.(event.pointerId);
   };
 
   const reset = () => {
+    targetScale.current = 1;
+    targetPan.current = { x: 0, y: 0 };
     setScale(1);
     setPan({ x: 0, y: 0 });
   };
@@ -422,99 +533,70 @@ export function HistoricalMap({
         dragging ? 'cursor-grabbing' : 'cursor-grab'
       }`}
       style={{
-        // Archival muted dusty blue-grey ocean wash for surrounding canvas
         background: 'linear-gradient(145deg, #7c9aa8 0%, #8ca9b7 50%, #7896a4 100%)',
       }}
     >
       {/* Refined Museum Inset Border */}
       <div className="pointer-events-none absolute inset-2.5 z-10 rounded-2xl border border-[#ede1cd]/70 shadow-[inset_0_0_0_9px_rgba(58,42,28,0.06)]" />
 
+      {/* Tactile Antique Laid Paper Grain & Parchment Vignette (GPU-composited CSS outside SVG for 60+ FPS) */}
+      <div
+        className="pointer-events-none absolute inset-0 z-10 grain opacity-30 mix-blend-multiply"
+        style={{
+          backgroundImage: 'radial-gradient(ellipse at center, transparent 40%, rgba(68, 48, 30, 0.20) 100%)',
+        }}
+      />
+
       <svg
         viewBox="0 0 1000 700"
-        className="h-full w-full transition-transform duration-100 ease-out"
+        className={`h-full w-full ${
+          dragging ? 'transition-none' : 'transition-transform duration-200 ease-out'
+        }`}
         style={{
           transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${scale})`,
           transformOrigin: '500px 350px',
+          willChange: dragging ? 'transform' : 'auto',
         }}
+        shapeRendering="geometricPrecision"
       >
         <defs>
-          {/* Global Landmask ClipPath: Automatically clips territories to real land so they never spill into the sea,
-              while allowing seamless, continuous coverage across Afghanistan, Pakistan, India, Bangladesh, Myanmar, etc. */}
+          {/* Global Landmask ClipPath: Precomputed single combined paths */}
           <clipPath id="world-land-clip">
-            {worldFeatures.map((feature, idx) => (
-              <path
-                key={`clip-w-${idx}`}
-                d={feature.geometry.coordinates
-                  .map((ring) => linePath(ring) + ' Z')
-                  .join(' ')}
-              />
+            {worldPaths.map((d, idx) => (
+              <path key={`clip-w-${idx}`} d={d} />
             ))}
-            {countries.map((country) => (
-              <path key={`clip-sa-${country.properties.name}`} d={geometryPath(country.geometry)} />
-            ))}
+            <path d={combinedCountryPath} />
           </clipPath>
 
-          {/* Desert Stipple Texture (Classical cartographic sand dune stipples in Thar & arid basins) */}
+          {/* Desert Stipple Texture (Fast hardware-supported static vector pattern) */}
           <pattern id="desert-stipple" width="10" height="10" patternUnits="userSpaceOnUse">
             <circle cx="2.5" cy="2.5" r="0.75" fill="#846d53" opacity="0.45" />
             <circle cx="7.5" cy="4.5" r="0.65" fill="#846d53" opacity="0.35" />
             <circle cx="4.0" cy="8.0" r="0.55" fill="#846d53" opacity="0.40" />
             <circle cx="8.5" cy="8.5" r="0.50" fill="#846d53" opacity="0.30" />
           </pattern>
-
-          {/* Tactile Antique Parchment Paper Grain Filter */}
-          <filter id="parchment-grain" x="0" y="0" width="100%" height="100%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0.35   0 0 0 0 0.28   0 0 0 0 0.18   0 0 0 0.045 0"
-              result="coloredNoise"
-            />
-            <feComposite in="SourceGraphic" in2="coloredNoise" operator="over" />
-          </filter>
         </defs>
 
-        {/* 1. WATER LAYER: Unmistakable archival dusty blue-grey ocean */}
+        {/* 1. WATER LAYER: Archival dusty blue-grey ocean */}
         <rect width="1000" height="700" fill="#809ea9" />
 
-        {/* Coastal Bathymetric Waves & Classical Engraved Shoreline Hachures */}
-        <g fill="none" stroke="#6e8d98" strokeWidth="2.2" opacity="0.40" pointerEvents="none">
-          {countries.map((country) => (
-            <path key={`wave-1-${country.properties.name}`} d={geometryPath(country.geometry)} />
-          ))}
-        </g>
-        <g fill="none" stroke="#668794" strokeWidth="1.2" strokeDasharray="3 4" opacity="0.45" pointerEvents="none">
-          {countries.map((country) => (
-            <path key={`wave-dash-1-${country.properties.name}`} d={geometryPath(country.geometry)} />
-          ))}
-        </g>
-        <g fill="none" stroke="#5d7f8d" strokeWidth="0.9" strokeDasharray="1.5 5" opacity="0.35" pointerEvents="none">
-          {countries.map((country) => (
-            <path key={`wave-dash-2-${country.properties.name}`} d={geometryPath(country.geometry)} />
-          ))}
-        </g>
-        <g fill="none" stroke="#6e8d98" strokeWidth="5.5" opacity="0.22" pointerEvents="none">
-          {countries.map((country) => (
-            <path key={`wave-2-${country.properties.name}`} d={geometryPath(country.geometry)} />
-          ))}
+        {/* Coastal Bathymetric Waves (Single combined paths for high performance) */}
+        <g fill="none" pointerEvents="none">
+          <path d={combinedCountryPath} stroke="#6e8d98" strokeWidth="2.2" opacity="0.40" />
+          <path d={combinedCountryPath} stroke="#668794" strokeWidth="1.2" strokeDasharray="3 4" opacity="0.45" />
+          <path d={combinedCountryPath} stroke="#5d7f8d" strokeWidth="0.9" strokeDasharray="1.5 5" opacity="0.35" />
+          <path d={combinedCountryPath} stroke="#6e8d98" strokeWidth="5.5" opacity="0.22" />
         </g>
 
-        {/* 2. WORLD CONTINENTAL LANDMASS (Full World Base: Arabia, Iran, Central Asia, China, SE Asia) */}
-        {/* Warm aged parchment buff tone - eliminates stark white floating islands! */}
+        {/* 2. WORLD CONTINENTAL LANDMASS (Warm aged parchment buff tone) */}
         <g fill="#ebdcc8" stroke="#baaa93" strokeWidth="0.55" strokeLinejoin="round">
-          {worldFeatures.map((feature, idx) => (
-            <path
-              key={`w-land-${idx}`}
-              d={feature.geometry.coordinates
-                .map((ring) => linePath(ring) + ' Z')
-                .join(' ')}
-            />
+          {worldPaths.map((d, idx) => (
+            <path key={`w-land-${idx}`} d={d} />
           ))}
         </g>
 
         {/* Desert Stipple Texture Overlays in Arid Zones */}
         <g pointerEvents="none">
-          {/* Thar Desert Stipple */}
           <ellipse
             cx={project([71.5, 27.0])[0]}
             cy={project([71.5, 27.0])[1]}
@@ -522,7 +604,6 @@ export function HistoricalMap({
             ry="36"
             fill="url(#desert-stipple)"
           />
-          {/* Balochistan / Makran Arid Stipple */}
           <ellipse
             cx={project([64.5, 28.5])[0]}
             cy={project([64.5, 28.5])[1]}
@@ -530,7 +611,6 @@ export function HistoricalMap({
             ry="26"
             fill="url(#desert-stipple)"
           />
-          {/* Iranian Plateau / Dasht-e Kavir Stipple */}
           <ellipse
             cx={project([56.0, 32.5])[0]}
             cy={project([56.0, 32.5])[1]}
@@ -542,55 +622,46 @@ export function HistoricalMap({
 
         {/* 3. HIGH-RESOLUTION SOUTH ASIA LANDMASS (Warm antique parchment tone) */}
         <g fill="#eedfcb" stroke="#8d7760" strokeWidth="0.8" strokeLinejoin="round">
-          {countries.map((country) => (
+          {countryPathList.map((country) => (
             <path
-              key={`sa-land-${country.properties.name}`}
-              d={geometryPath(country.geometry)}
-              // Modern country partition lines are ONLY stroked when Modern Borders is enabled
+              key={`sa-land-${country.name}`}
+              d={country.d}
               stroke={showModernBorders ? '#8d7760' : 'none'}
             />
           ))}
         </g>
 
-        {/* External Subcontinent Coastline Contour (Always drawn so coast is sharp against the blue sea) */}
+        {/* External Subcontinent Coastline Contour */}
         <g fill="none" stroke="#7a6550" strokeWidth="0.95" strokeLinejoin="round" pointerEvents="none">
-          {countries.map((country) => (
-            <path key={`sa-coast-${country.properties.name}`} d={geometryPath(country.geometry)} />
-          ))}
+          <path d={combinedCountryPath} />
         </g>
 
         {/* 4. MODERN REFERENCE BORDERS (ONLY visible when toggle is ON) */}
         {showModernBorders && (
           <g fill="none" stroke="#634c3a" strokeWidth="0.85" strokeDasharray="3 3.5" opacity="0.85" pointerEvents="none">
-            {countries.map((country) => (
-              <path key={`mod-border-${country.properties.name}`} d={geometryPath(country.geometry)} />
-            ))}
+            <path d={combinedCountryPath} />
           </g>
         )}
 
         {/* 5. HISTORICAL TERRITORIAL WASH (Subordinate to geography, clipped to world landmass) */}
-        {/* Confident, richer transparent watercolor land wash spanning the empire's full civilizational horizon
-            (Pakistan, Afghanistan, India, Bangladesh, Myanmar, etc.) without modern boundary partition lines */}
         <g clipPath="url(#world-land-clip)">
           {regions.map((region) => {
             const isSelected = selectedRegion?.id === region.id;
             const isHovered = hoveredRegion?.id === region.id;
             const uncertain = region.certainty !== 'well-supported';
 
-            // Get territorial path (Republic uses sovereign geometry, historical entities use genuine cross-border rings)
+            // Get territorial path
             const territoryPath =
-              region.id === 'modern-india-republic' && indiaCountry
-                ? geometryPath(indiaCountry.geometry)
-                : historicalGeometry[region.id]?.ring
-                ? ringPath(historicalGeometry[region.id].ring)
-                : null;
+              region.id === 'modern-india-republic' && indiaD
+                ? indiaD
+                : precomputedTerritoryPaths[region.id] || null;
 
             if (!territoryPath) return null;
 
             return (
               <g
                 key={region.id}
-                className="interactive-region cursor-pointer transition-opacity duration-300"
+                className="interactive-region cursor-pointer transition-opacity duration-200"
                 onClick={(event) => {
                   event.stopPropagation();
                   onSelectRegion(isSelected ? null : region);
@@ -598,7 +669,7 @@ export function HistoricalMap({
                 onMouseEnter={() => setHoveredRegion(region)}
                 onMouseLeave={() => setHoveredRegion(null)}
               >
-                {/* A. Broad Continuous Rich Watercolor Wash (Darker and more confident per user request) */}
+                {/* A. Broad Continuous Rich Watercolor Wash */}
                 <path
                   d={territoryPath}
                   fill={region.colorTheme}
@@ -606,7 +677,7 @@ export function HistoricalMap({
                   stroke="none"
                 />
 
-                {/* B. Central Emphasis Tint (Adds depth to the heartland) */}
+                {/* B. Central Emphasis Tint */}
                 <path
                   d={territoryPath}
                   fill={region.colorTheme}
@@ -630,90 +701,68 @@ export function HistoricalMap({
           })}
         </g>
 
-        {/* 6. GEOGRAPHY LAYER: River Systems (Rendered ON TOP of territory wash for crystal legibility) */}
+        {/* 6. GEOGRAPHY LAYER: River Systems */}
         <g fill="none" strokeLinecap="round" strokeLinejoin="round">
-          {rivers.map((river) => {
-            const isMajorArtery =
-              river.properties.name === 'Ganges' ||
-              river.properties.name === 'Indus' ||
-              river.properties.name === 'Brahmaputra';
-
-            const lines: Position[][] =
-              river.geometry.type === 'LineString'
-                ? [river.geometry.coordinates as Position[]]
-                : (river.geometry.coordinates as Position[][]);
-            const midpoint = (lines[0] ?? [[0, 0] as Position])[Math.floor((lines[0]?.length ?? 1) / 2)] as Position;
-            const [labelX, labelY] = project(midpoint);
-
-            return (
-              <g key={`${river.properties.name}-${riverPath(river.geometry).slice(0, 25)}`}>
-                <path
-                  d={riverPath(river.geometry)}
-                  stroke="#22485c"
-                  strokeWidth={isMajorArtery ? 1.95 : 1.35}
+          {riverRenderData.map((river) => (
+            <g key={river.key}>
+              <path
+                d={river.d}
+                stroke="#22485c"
+                strokeWidth={river.isMajorArtery ? 1.95 : 1.35}
+                opacity="0.95"
+              />
+              {showRegionalDetail && (
+                <text
+                  x={river.labelX}
+                  y={river.labelY - 3}
+                  fill="#153b4e"
+                  stroke="#eedfcb"
+                  strokeWidth="2.8"
+                  paintOrder="stroke"
+                  fontFamily="Georgia, serif"
+                  fontStyle="italic"
+                  fontSize="8"
+                  letterSpacing="0.8"
                   opacity="0.95"
-                />
-                {showRegionalDetail && (
-                  <text
-                    x={labelX}
-                    y={labelY - 3}
-                    fill="#153b4e"
-                    stroke="#eedfcb"
-                    strokeWidth="2.8"
-                    paintOrder="stroke"
-                    fontFamily="Georgia, serif"
-                    fontStyle="italic"
-                    fontSize="8"
-                    letterSpacing="0.8"
-                    opacity="0.95"
-                  >
-                    {river.properties.name}
-                  </text>
-                )}
-              </g>
-            );
-          })}
+                >
+                  {river.name}
+                </text>
+              )}
+            </g>
+          ))}
         </g>
 
         {/* 7. Continents and Broad Surrounding World Realms */}
         <g fill="#695642" fontFamily="Georgia, serif" opacity="0.85" pointerEvents="none">
-          {continentAndRealmLabels.map(([label, coordinate]) => {
-            const [x, y] = project(coordinate);
-            return (
-              <text
-                key={label}
-                x={x}
-                y={y}
-                textAnchor="middle"
-                stroke="#eedfcb"
-                strokeWidth="2.5"
-                paintOrder="stroke"
-                fontSize="9"
-                fontWeight="bold"
-                letterSpacing="3.5"
-              >
-                {label}
-              </text>
-            );
-          })}
+          {continentAndRealmRenderData.map(({ label, x, y }) => (
+            <text
+              key={label}
+              x={x}
+              y={y}
+              textAnchor="middle"
+              stroke="#eedfcb"
+              strokeWidth="2.5"
+              paintOrder="stroke"
+              fontSize="9"
+              fontWeight="bold"
+              letterSpacing="3.5"
+            >
+              {label}
+            </text>
+          ))}
         </g>
 
         {/* 8. Seas, Gulfs, Straits and Oceans (Antique Italic Typography) */}
         <g fill="#173f52" fontFamily="Georgia, serif" fontStyle="italic" opacity="0.92" pointerEvents="none">
-          {seaLabels.map(([label, coordinate, rotation]) => {
-            const isMajorOcean = label.includes('OCEAN') || label.includes('SEA') || label.includes('BAY');
-            const [x, y] = project(coordinate);
-
-            // Minor gulfs and straits visible when zooming into region
+          {seaRenderData.map(({ label, x, y, rot, isMajorOcean }) => {
             if (!isMajorOcean && !showRegionalDetail) return null;
-
             return (
               <text
                 key={label}
                 x={x}
                 y={y}
                 textAnchor="middle"
-                transform={rotation ? `rotate(${rotation} ${x} ${y})` : undefined}
+                transform={rot ? `rotate(${rot} ${x} ${y})` : undefined}
                 stroke="#809ea9"
                 strokeWidth="2.4"
                 paintOrder="stroke"
@@ -729,17 +778,15 @@ export function HistoricalMap({
 
         {/* 9. Mountain & Plateau Physical Landmarks */}
         <g fill="#4e3c2c" fontFamily="Georgia, serif" opacity="0.88" pointerEvents="none">
-          {physicalLandLabels.map(([label, coordinate, rotation]) => {
-            const [x, y] = project(coordinate);
+          {physicalLandRenderData.map(({ label, x, y, rot }) => {
             if (!showRegionalDetail) return null;
-
             return (
               <text
                 key={label}
                 x={x}
                 y={y}
                 textAnchor="middle"
-                transform={rotation ? `rotate(${rotation} ${x} ${y})` : undefined}
+                transform={rot ? `rotate(${rot} ${x} ${y})` : undefined}
                 stroke="#eedfcb"
                 strokeWidth="2.5"
                 paintOrder="stroke"
@@ -756,42 +803,33 @@ export function HistoricalMap({
         {/* 10. Contextual Historical Regions (Shown ONLY when Modern Borders is OFF) */}
         {!showModernBorders && showRegionalDetail && (
           <g fill="#5a4432" fontFamily="Georgia, serif" fontSize="8" fontStyle="italic" letterSpacing="1.5" opacity="0.85" pointerEvents="none">
-            {(eraHistoricalRegions[currentEra] || []).map(([name, coordinate]) => {
-              const [x, y] = project(coordinate);
-              return (
-                <text key={name} x={x} y={y} textAnchor="middle" stroke="#eedfcb" strokeWidth="2.4" paintOrder="stroke">
-                  {name}
-                </text>
-              );
-            })}
+            {(eraHistoricalRenderData[currentEra] || []).map(({ name, x, y }) => (
+              <text key={name} x={x} y={y} textAnchor="middle" stroke="#eedfcb" strokeWidth="2.4" paintOrder="stroke">
+                {name}
+              </text>
+            ))}
           </g>
         )}
 
         {/* 11. Modern Country Reference Labels (ONLY shown when Modern Borders toggle is ON) */}
         {showModernBorders && (
           <g fill="#332418" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="8.5" letterSpacing="1.8" opacity="0.90" pointerEvents="none">
-            {modernCountryReferenceLabels.map(([label, coordinate]) => {
-              const [x, y] = project(coordinate);
-              return (
-                <text key={label} x={x} y={y} textAnchor="middle" stroke="#eedfcb" strokeWidth="3.0" paintOrder="stroke">
-                  {label}
-                </text>
-              );
-            })}
+            {modernCountryRenderData.map(({ label, x, y }) => (
+              <text key={label} x={x} y={y} textAnchor="middle" stroke="#eedfcb" strokeWidth="3.0" paintOrder="stroke">
+                {label}
+              </text>
+            ))}
           </g>
         )}
 
         {/* 12. Modern States & Provinces (ONLY shown when Modern Borders is ON AND Zoomed in >= 1.22) */}
         {showModernBorders && showRegionalDetail && (
           <g fill="#4f3b2c" fontFamily="Arial, sans-serif" fontWeight="600" fontSize="7" letterSpacing="0.8" opacity="0.85" pointerEvents="none">
-            {modernStateAndProvinceLabels.map(([name, coordinate]) => {
-              const [x, y] = project(coordinate);
-              return (
-                <text key={name} x={x} y={y} textAnchor="middle" stroke="#eedfcb" strokeWidth="2.4" paintOrder="stroke">
-                  {name}
-                </text>
-              );
-            })}
+            {modernStateRenderData.map(({ name, x, y }) => (
+              <text key={name} x={x} y={y} textAnchor="middle" stroke="#eedfcb" strokeWidth="2.4" paintOrder="stroke">
+                {name}
+              </text>
+            ))}
           </g>
         )}
 
@@ -931,17 +969,6 @@ export function HistoricalMap({
             );
           })}
         </g>
-
-        {/* 15. Tactile Antique Laid Paper Grain Filter Layer */}
-        <rect
-          width="1000"
-          height="700"
-          filter="url(#parchment-grain)"
-          fill="#f6efe4"
-          opacity="0.20"
-          pointerEvents="none"
-          style={{ mixBlendMode: 'multiply' }}
-        />
       </svg>
 
       {/* Floating Navigation Controls */}
